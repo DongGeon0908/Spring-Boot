@@ -58,3 +58,23 @@
     + `InputStreamReader`를 통해 배열로 여러개의 문자를 받음
     + `BufferedReader`를 통해 가변길이의 문자를 받을 수 있음
     + `BufferWriter`를 통해 가변길이의 문자를 전송할 수 있음
+
+<br>
+
+#### JPA
+
+- `Java Persistence Application Programing Interface`
+    + `Java Persistence API`
+    + 데이터를 영구히 기록되게 함
+    + `API`는 애플리케이션 프로그래밍 인터페이스를 의미
+        * 인터페이스는 프로그램을 사용할때 꼭 지켜야할 약속
+        * 인터페이스는 상하관계가 존재하는 약속
+    + 자바 프로그래밍을 할떄 영구적으로 데이터를 저장하기 위해서 필요한 `API`
+
+- `ORM` 기술
+    + `Object Relation Mapping`
+    + 오브젝트를 데이터베이스에 연결하는 방법
+    + 자바에서 클래스를 만들어서 데이터베이스에 자동으로 테이블이 만들어지도록 하는 기술
+    + 반복적인 `CRUD` 작업 생략 가능
+        * 전송된 커리에 대한 작업들을 함수로 수행할 수 있음
+        * 반복적인 작업들은 도와줌
