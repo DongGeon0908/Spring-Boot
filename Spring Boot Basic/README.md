@@ -97,3 +97,69 @@
     + `Spring`은 `JPA`에서 추상화 객체를 통해 다양한 데이터베이스 프로그램과 연동해서 사용 가능
 
 <br>    
+
+### 스프링부트 동작원리
+
+- 내장 톰켓 지원
+    + 톰켓을 따로 설치할 필요 없음
+
+- 톰켓이란?
+    + `Socket`
+        * 운영체게가 가지고 있는 것
+        * main 스레드는 소켓을 운영하고 다른 스레드는 다른 사용자와 연결 진행
+        * 소켓 통신은 부하를 늘림
+    + `http` 통신  
+        * `socket`을 이용해 구현
+        * `stateless` 방식
+        * 문서를 전달하는 통신
+
+- 웹서버
+    + `request`와 `response`를 통해 데이터 교환
+    + `client`는 `host`의 주소를 모름
+
+- 아파치&톰켓
+    + 아파치
+        * 요청한 파일을 제공
+        * 특정 폴더를 지정해서 사용자와 데이터 공유
+        * `request`에 따라 데이터를 `response`
+        * 자바코드를 해석하지 못함
+    + 톰켓
+        * 요청한 파일이 자바파일이면 컴파일 진행
+        * 자바코드를 컴파일하고 html 문서로 작성
+        * 작성된 문서를 아파치로 전송
+
+- 서블릿 컨테이너
+    + `URL`
+        * 자유 접근 X
+        * 아파치
+    + `URI`
+        * 식별자 접근
+        * 톰켓
+    + 서블릿
+        * 자바 코드로 웹 구현
+    + 서블릿 컨테이너
+        * 서블릿이 모여 있는 컨테이너
+    + 사용자의 요청을 통해 정해진 양의 객체를 생성하고 삭제
+
+- `web.xml`
+    + `ServletContext`의 초기 파라미터
+    + `Session`의 유효기간 설정
+    + `Servlet/jsp`에 대한 정의
+    + `Servlet/jsp` 매핑
+    + `Mime Type` 매핑
+        * 내가 들고올 데이터가 무엇인지 확인
+    + `Welcome File list`
+    + `Error Pages` 처러
+    + 리스너/필터 설정
+    + 보안
+
+- `FrontController` 패턴
+    + 최초 앞단에서 `request` 요청을 받아서 필요한 클래스를 넘겨줌
+    + `RequestDispatcher`를 통해 `request`와 'response' 정보를 유지
+
+- `RequestDispatcher`
+    + 필요한 클래스 요청이 도달했을떄 `FrontController`에 도착한 `request`와 `responnse`를 그대로 유지시킴
+
+- `DispatchServlet`
+    + `FrontController` + `RequestDispatcher`
+    + `FrontController` 패턴을 직접 짜거나 `RequestDispatcher`
