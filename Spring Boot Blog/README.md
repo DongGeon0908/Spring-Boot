@@ -11,6 +11,14 @@
 
 <br>
 
+### dependencey
+- Spring Boot DevTools
+- Lombok
+- Spring Data JPA
+- Mysql Driver
+- Spring Security
+- Spring Web
+
 ### 📒Contents
 
 
