@@ -198,3 +198,5 @@
         * `html or data`중 어떤것을 응답할지 결정
         * `data`를 응답할 경우 `MessageConverter`가 작동하게 됨
         * 메시지를 컨버팅할 때 기본절략은 `json`
+
+![Spring](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20Basic/spring.png)
