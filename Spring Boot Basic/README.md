@@ -163,3 +163,38 @@
 - `DispatchServlet`
     + `FrontController` + `RequestDispatcher`
     + `FrontController` 패턴을 직접 짜거나 `RequestDispatcher`
+    + 주소 분배
+    + 컴포넌트를 메모리에 로딩
+
+- 스프링 컨테이너
+    + `IOC`
+        * 수 많은 객체들이 `ApplicationContext`에 등록
+        * 제어의 역전
+    + `DI`
+        * 의존성 주입
+        * 필요한 곳에서 `ApplicationContext`에 접근해 필요한 객체 가져옴
+        * `ApplicationContext`는 싱글톤으로 관리
+        * 어디에서 접근하든 동일한 객체 보장
+    + `servlet-applicationContext`
+        * `ViewResolver`
+        * `Interceptor`
+        * `MultipartResolver`
+        * 웹과 관련된 어노테이션 `Controller, RestController` 스캔 --> `DispatchServlet`에 의해 실행
+    + `root-applicationContext`
+        * `Service, Repository`등을 스캔
+        * `Database`관련 객체 생성
+        * `servlet-applicationContext`보다 먼저 실행됨
+        * `servlet-applicationContext`는 `root-applicationContext`가 로드한 객체 참조 가능, 그반대는 불가
+    + `Bean Factory`
+        * 필요한 객체를 `Bean Factory` 등록
+        * 초기에 메모리에 로드되지 않음
+        * 필요할때 `getBean()`을 통해 메모리에 로드
+        
+    + 요청 주소에 따른 적절한 컨트롤로 요청 `Handler Mapping`
+        * `Get` 요청
+        * 해당 주소 요청이 오면 적절한 컨트롤러의 함수를 찾아 실행
+    + 응답
+        * `ViewResolver`
+        * `html or data`중 어떤것을 응답할지 결정
+        * `data`를 응답할 경우 `MessageConverter`가 작동하게 됨
+        * 메시지를 컨버팅할 때 기본절략은 `json`
