@@ -11,3 +11,8 @@
 - ctrl + shift + o -> 전체 라이브러리 import
 
 - 스프링에 대한 기본 설정 적용
+
+- mysql 한글패티
+
+- properties 방식보다 yml 파일이 더 간단하고 편리
+
