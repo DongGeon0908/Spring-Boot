@@ -27,3 +27,26 @@
     + 헤드 `head`
 
 - 깃은 작업영역, 인덱스, 헤드를 동기화하는 것
+
+- http 1.1
+
+postman 설치
+
+- http 통신 : 약속이 필요
+    + 통신 방법, 요청 방법
+        * `get` -> 데이터를 줘~
+        * `post` -> 데이터를 추가해줘~
+        * `put` -> 데이터를 수정해줘~
+        * `delete` -> 데이터를 삭제해줘~
+
+- `stateless`와 `stateful`
+    + `socket` 통신
+        * 계속 연결해서 데이터를 전송
+    + `http - statless`
+        * 요청시마다 스트림을 연결해서 data를 주고 받는 방식    
+    + `stateful`
+        * 연결이 지속됨
+    + `Spring Security`
+        * `session`을 유지하는 보안적인 방법
+        
+- MIME 타입이란
