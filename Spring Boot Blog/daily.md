@@ -179,7 +179,7 @@ server:
 - `Enum`
 
 
-- ymal 설정
+- yml 설정
 ```
  jpa:
     open-in-view: true
