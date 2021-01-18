@@ -43,7 +43,7 @@ public class HttpControllerTest {
 //		return "post 요청 : " + text
 //	}
 // text plain	
-
+   
 	// http://localhost:8000/blog/http/put (update)
 	@PutMapping("/http/put")
 	public String putTest() {

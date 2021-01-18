@@ -195,4 +195,4 @@ server:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 ```
 
-- 18강까지 수강함
+- 연관관계의 주인 부분부터 시작!

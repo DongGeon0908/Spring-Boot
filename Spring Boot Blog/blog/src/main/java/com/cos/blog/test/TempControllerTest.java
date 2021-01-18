@@ -15,9 +15,9 @@ public class TempControllerTest {
 		// 리턴면 : /home.html으로 해야 찾을 수 있음
 		// 전체 경로 : src/main/resources/static/home.html
 		
-		return "/home.html";
+		return "home.html";
 	}
-	
+	   
 	//http://localhost:8000/blog/temp/img
 	@GetMapping("/temp/img")
 	public String tempImg() {
