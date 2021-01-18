@@ -1,5 +1,5 @@
+### 스프링 실습
 
-- 2021-01-16
 
 - 스프링 -> IOC -> 제어의 역전
 - 싱글톤 패천
@@ -59,3 +59,119 @@ postman 설치
 
 - 서킷 스위칭
 > A와 B가 데이터를 교환할때 전체 데이터를 전송, 속도는 빠르지만 물리적으로 비용이 많이 듬
+
+- `http 405 error`
+    + 인터넷 브라우저 요청은 `get`방식만 가능
+
+- `post, put, delete`는 각각의 요청을 따라야함
+
+- 자바에서 변수를 `private`로 쓰는 이유
+    + 객체지향에서 변수를 직접 접근하는 방법은 지양
+    + 변수는 `private`이고 해당 변수를 `public`으로 접근해야 함
+    + 변수의 상태를 메서드로 관리해야함
+    
+- `Spring Boot`에서 `get` 방식은 `select` 실행
+
+- `Spring Boot`에서 `post` 방식은 `insert` 실행
+
+
+- `post`요청에서 `json`데이터 해석
+- `json 형태`
+```
+{
+    "id" : 1,
+    "username" : "hello",
+    "password" : "1234",
+    "email" : "wrjs@naver.com
+}
+```
+
+- `@RequestBody`을 통해 데이터를 매핑해서 받을 수 있음
+
+- `Maven`이란?
+    + 중앙저장소에 각각의 프로젝트에 필요한 라이브러리를 저장
+    + `pom.xml`에 프로젝트 필요한 라이브러리를 작성
+        * `.m2`라는 폴더에 자동으로 저장 및 관리
+
+- `SpringBoot`에서 코드가 변경된 경우 서버를 재시작해야함
+
+- `yml` 설정
+    + 스프링 프로젝트를 설정하는 것
+    + `xml`, `json` 보다 경량 데이터
+
+- `root-context.xml`
+    + 데이터베이스 같이 한번만 설정하면 되는것
+
+- `servlet-context.xml`
+    + 계속 변하는 값
+
+- `application.yml`
+    + `web.xml`, `root-context.xml`, `servlet-context.xml`의 합본
+
+```
+server:
+  port: 8000
+  servlet:
+    context-path: /blog
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+    
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Seoul
+    username: cos
+    password: cos1234
+    
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      use-new-id-generator-mappings: false
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+```
+
+- 포트설정
+```
+server:
+  port: 8000
+  servlet:
+    context-path: /blog
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+```
+
+- 데이터베이스 설정
+```
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Seoul
+    username: cos
+    password: cos1234
+```
+
+- 스프링은 기본적으로 jsp파일을 지원하지 않음
+
+- `RestController`는 리턴된 문자열 자체를 반환
+
+- `Controller`는 해당 경로에 있는 파일 자체를 반환
+
+- `static` 폴더에는 정적인 파일만 들어감
+    + `jsp`파일은 컴파일이 되지 않음
