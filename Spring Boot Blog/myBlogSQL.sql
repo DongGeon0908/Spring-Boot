@@ -11,3 +11,7 @@ create user 'cos'@'%' identified by 'cos1234';
 GRANT ALL PRIVILEGES ON *.* TO 'cos'@'%';
 CREATE DATABASE blog CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 use blog;
+
+# 테이블 확인 명령어
+show tables;
+select * from user;

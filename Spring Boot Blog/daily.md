@@ -175,3 +175,24 @@ server:
 
 - `static` 폴더에는 정적인 파일만 들어감
     + `jsp`파일은 컴파일이 되지 않음
+
+- `Enum`
+
+
+- ymal 설정
+```
+ jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: create
+      naming:
+```
+> 해당 부분에서 `ddl-auto: create`에서 create는 프로젝트 시작마다 테이블을 생성하는것! 한번 실행한 뒤에는 update로 바꾸자!!
+
+- 필드 그대로 데이터베이스에 생성
+```
+ naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+```
+
+- 18강까지 수강함
