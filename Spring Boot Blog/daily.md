@@ -195,4 +195,29 @@ server:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 ```
 
-- 연관관계의 주인 부분부터 시작!
+- 연관관계 주인 == `FK`를 가진 오브젝트
+> 자바프로그램이 보낸 쿼리를 JPA는 자동으로 JOIN을 통해 데이터베이스에서 해당 자료를 받아옴
+
+- `JSON`
+  + 공용어의 의미
+```
+JAVA object -> JSON -> PYTHON
+
+```
+  + `JSON`은 중간 데이터
+  + 통신을 한다는 것은 자바오브젝트를 `JSON`으로 보내는 것을 의미
+  + `SpringBoot`에서는 `MIME-TYPE`이 `JSON`
+  + 요청 데이터 -> `json` -> `JAVA OBJECT`
+  + 응답 데이터 -> `json` -> `JAVA OBJECT`
+  
+  - `ManyToMany`
+    + 사용하지 않음
+    + 서로의 `pk`로만 중간 테이블을 생성해 날짜나 시간처럼 다른 필드들이 필요할 수 있기 때문이다.
+
+  - `null` 값을 제외하고 `insert`
+    + `@DynamicInsert`
+
+  - `enum`
+    + 내가 추가하는 값을 강제할 수 있음
+    + 데이터의 도메인을 만들때 사용
+      * 도메인은 데이터의 범위를 의미함

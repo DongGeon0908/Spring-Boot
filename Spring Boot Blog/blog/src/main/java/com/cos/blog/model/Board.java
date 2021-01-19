@@ -1,15 +1,18 @@
 package com.cos.blog.model;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
@@ -40,10 +43,13 @@ public class Board {
 	@ColumnDefault("0")
 	private int count; // 조회수
 
-	@ManyToOne // Many = Board, User = One -> 한명의 유저는 다양한 게시글을 작성할 수 있음, 연관관계 설정
+	@ManyToOne(fetch = FetchType.EAGER) // Many = Board, User = One -> 한명의 유저는 다양한 게시글을 작성할 수 있음, 연관관계 설정
 	@JoinColumn(name = "userId")
 	private User userId; // 데이터베이스에는 오브젝트 저장 불가, FK, 자바는 오브젝트 저장 가능
 
+	@OneToMany(mappedBy = "board", fetch = FetchType.EAGER) // mappedBy 연관관계의 주인이 아니다. (FK가 아님), DB에 컬럼을 만들지 마시오
+	private List<Reply> reply;
+	 
 	@CreationTimestamp // 시간이 자동 입력
 	private Timestamp createDate;
 }
