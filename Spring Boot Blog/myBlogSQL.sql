@@ -27,3 +27,10 @@ show variables like 'c%';
 # 테이블 삭제
 drop table user;
 drop table board;
+
+# safe mode 해제
+SET SQL_SAFE_UPDATES =0;
+
+# 투플 삭제
+delete from user;
+commit;

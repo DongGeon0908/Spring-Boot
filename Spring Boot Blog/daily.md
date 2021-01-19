@@ -1,27 +1,27 @@
 ### 스프링 실습
 
 
-- 스프링 -> IOC -> 제어의 역전
+- 스프링 -> `IOC` -> 제어의 역전
 - 싱글톤 패천
 - 레퍼런스 변수를 스프링이 관리
 
-> 패키지 -> 스캔 : 필요한 것들을 메모리 로드 IOC 싱글톤
+> 패키지 -> 스캔 : 필요한 것들을 메모리 로드 `IOC` 싱글톤
 > 결론적으로 우리가 만든 패키지 이하에 만들어야 스프링이 읽을 수 있음
 
-- ctrl + shift + o -> 전체 라이브러리 import
+- `ctrl + shift + o` -> 전체 라이브러리 import
 
 - 스프링에 대한 기본 설정 적용
 
-- mysql 한글패티
+- `mysql` 한글패티
 
-- properties 방식보다 yml 파일이 더 간단하고 편리
+- `properties` 방식보다 `yml` 파일이 더 간단하고 편리
 
 - 깃허브란?
     + snapshot
         * 장면을 기록
-    + 특정 시점, 장소를 snapshot을 통해 기록하는 것    
+    + 특정 시점, 장소를 `snapshot`을 통해 기록하는 것    
 
-- git의 3가지 영역
+- `gi`t`의 3가지 영역
     + 작업영역
     + 인덱스 `index`
     + 헤드 `head`
@@ -30,7 +30,8 @@
 
 - http 1.1
 
-postman 설치
+- `postman` 설치
+  + 해당 프로그램은 `API`를 확인하는데 사용
 
 - http 통신 : 약속이 필요
     + 통신 방법, 요청 방법
@@ -49,12 +50,12 @@ postman 설치
     + `Spring Security`
         * `session`을 유지하는 보안적인 방법
         
-- MIME 타입이란
+- `MIME` 타입이란
     + 내가 바디에 시러 보낼 데이터의 종류를 헤더에 작성
     + 클라이언트에게 전송된 문서의 다양성을 알려주는 것
     + `type/subtype`
 
-- http 통신은 패킷 스위칭 통신
+- `http` 통신은 패킷 스위칭 통신
 > 패킷을 쪼개어 전송, 수신자는 해당 패킷을 조립해서 받음
 
 - 서킷 스위칭
@@ -179,7 +180,7 @@ server:
 - `Enum`
 
 
-- yml 설정
+- `yml` 설정
 ```
  jpa:
     open-in-view: true
@@ -223,6 +224,38 @@ JAVA object -> JSON -> PYTHON
       * 도메인은 데이터의 범위를 의미함
 
 - 영속성 컨텍스트
-> JPA에서 영속성 컨텍스트 안에 1차 캐시에 데이터가 입력되면 DB에 해당 데이터를 보냄
+> `JPA`에서 영속성 컨텍스트 안에 1차 캐시에 데이터가 입력되면 DB에 해당 데이터를 보냄
 
 > 변경을 감지하고 데이터베이스에 수정을 요청함
+
+- `Json` 데이터로 통신하기
+  + `Get`요청 
+    * 주소에 데이터를 담아 보냄
+    * `select`
+    * `key=value`
+    * `http://www.naver.com/user?id=kdg`
+    * `body`로 데이터를 담아 보내지 않음
+  + `post, put, delete`
+    * `body`에 데이터를 담아 보냄
+    * 데이터 변경이 발생
+    * 데이터 형태는 `json`으로 통일하는 것이 바람직
+    * `form 태그 method='post'` ==> get요청과 post요청만 가능
+    * 자바스크립트 요청 ==> `put & delete`
+  + 결론적으로 post, put, delete, get 등을 통일된 방식으로 사용
+    * 자바스크립트로 `ajax` 요청 + 데이터는 `json`으로 통일
+  + `form:form` 태그
+    * `post, put, delete, get`요청 가능
+  + 스프링 컨트롤러의 파싱 전략 1
+    * `key=value` 데이터를 자동으로 파싱해 변수에 저장
+  + 스프링 컨트롤러의 파싱 전략 2
+    * `key=value` 형태의 데이터를 오브젝트로 파싱해서 받아주는 역할
+    * `setter`가 없으면 스프링은 `key-value`을 파싱하지 못함
+  + 오브젝트로 데이터 받기
+    * `post`의 방식 `key-value` `x-www-form-urlencoded`
+    * username=ssar
+  + `key-value`값이 아닌 경우
+    * `@RequestBody`를 붙여서 사용
+    * `MessageConverter` 클래스를 구현한 `Jackson` 라이브러리가 발동하면서 JSON 데이터를 자바 오브젝트로 파싱해서 받아줌
+  + `key-value`가 아니고 `json`데이터를 어떻게 전송하는가?
+    * `<form>`태그를 사용
+    + 자바스크립트가 해당 데이터를 `json`으로 변환
