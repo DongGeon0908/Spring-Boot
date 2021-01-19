@@ -15,6 +15,8 @@ use blog;
 # 테이블 확인 명령어
 show tables;
 select * from user;
+select * from reply;
+select * from board;
 
 # 데이터베이스 삭제
 drop database blog;

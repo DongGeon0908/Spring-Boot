@@ -31,8 +31,8 @@ public class DummyControllerTest {
 	// save함수는 id를 전달하면 해당 id에 대한 데이터가 있으면 update 진행
 	// save함수는 id를 전달하면 해당 id에 대한 데이터가 없으면 insert 진행
 	// email, password
-	
-	@Transactional // 더티 체킹
+	// http://localhost:8000/blog/dummy/user/{id} 
+	@Transactional // 더티 체킹, 함수 종료시에 자동 commit이 됨, 변경을 감지하고 데이터베이스에 수정 요청
 	@PutMapping("/dummy/user/{id}")
 	public User updateUser(@PathVariable int id, @RequestBody User requestUser) { //JSON 데이터를 요청 => JAVA OBJECT(MESSAGECONVERTOR의 JACKSON 라이브러리가 변환해서 받음
 		System.out.println("id : " + id);
@@ -41,10 +41,10 @@ public class DummyControllerTest {
 		
 		User user = userRepository.findById(id).orElseThrow(()->{
 			return new IllegalArgumentException("수정에 실패했습니다.");
-		});
+		}); // 영속화 단계
 		
-		user.setPassword(requestUser.getPassword());
-		user.setEmail(requestUser.getEmail());
+		user.setPassword(requestUser.getPassword()); // 영속화 이후 데이터 변경
+		user.setEmail(requestUser.getEmail()); // 영속화 이후 데이터 변경
 		
 		// userRepository.save(user); // @Transactional을 통해 해당 라인이 없어도 데이터베이스에 수정된 데이터 반영 가능
 		
