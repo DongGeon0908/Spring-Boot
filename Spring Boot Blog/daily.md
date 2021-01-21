@@ -259,3 +259,10 @@ JAVA object -> JSON -> PYTHON
   + `key-value`가 아니고 `json`데이터를 어떻게 전송하는가?
     * `<form>`태그를 사용
     + 자바스크립트가 해당 데이터를 `json`으로 변환
+
+    - bootstrap
+      + 부트스트랩을 이용하면 컨테이너 단위로 디자인을 구성할 수 있음
+
+    - 모든 페이지에 템플릿 적용 필요
+      + 중복되는 헤더와 푸터는 파일을 쪼갠다
+      + `<%@ include file="layout/header.jsp"%>`
