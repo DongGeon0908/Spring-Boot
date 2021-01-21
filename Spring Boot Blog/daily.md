@@ -260,9 +260,39 @@ JAVA object -> JSON -> PYTHON
     * `<form>`태그를 사용
     + 자바스크립트가 해당 데이터를 `json`으로 변환
 
-    - bootstrap
-      + 부트스트랩을 이용하면 컨테이너 단위로 디자인을 구성할 수 있음
+- bootstrap
+  + 부트스트랩을 이용하면 컨테이너 단위로 디자인을 구성할 수 있음
 
-    - 모든 페이지에 템플릿 적용 필요
-      + 중복되는 헤더와 푸터는 파일을 쪼갠다
-      + `<%@ include file="layout/header.jsp"%>`
+- 모든 페이지에 템플릿 적용 필요
+  + 중복되는 헤더와 푸터는 파일을 쪼갠다
+  + `<%@ include file="layout/header.jsp"%>`
+
+- `get/post` 방식은 예전 방식
+  + 현재 스프링에서도 `json`을 통해 데이터를 주고 받음...
+
+```
+let index = {
+	init: function() {
+		$("#btn-save").on("click", () => {
+			this.save();
+		});
+	},
+
+	save: function() {
+		//alert('user의 save함수 호출됨');
+		let data = {
+			username: $("#username").val(),
+			password: $("#password").val(),
+			email: $("#email").val()
+		}
+		// console.log(data)
+		
+		// ajax 통신을 이용해서 3개의 데이터를 json으로 변경해 insert 요청
+		$.ajax().done().fail();
+	}
+}
+
+index.init();
+```
+
+- Spring에서 static 폴더에 js파일을 모아둠
