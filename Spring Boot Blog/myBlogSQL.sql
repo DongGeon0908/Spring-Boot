@@ -34,3 +34,15 @@ SET SQL_SAFE_UPDATES =0;
 # 투플 삭제
 delete from user;
 commit;
+
+# 테이블 컬럼 속성 보기
+SHOW COLUMNS FROM `user`;
+
+# 제약조건 확인
+desc user;
+SELECT * 
+FROM information_schema.table_constraints
+WHERE 'user';
+SELECT DISTINCT username FROM user;
+
+

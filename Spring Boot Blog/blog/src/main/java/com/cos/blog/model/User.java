@@ -17,7 +17,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data // getter-setter
 @NoArgsConstructor // bean 생성자
 @AllArgsConstructor // 전체 생성자
@@ -41,12 +40,14 @@ public class User {
 	private String email; // email
 
 	// @ColumnDefault("'user'")
-	//private String role; // Enum을 쓰는게 좋음 --> 권한을 줄때 domain(범위)을 설정할 수 있음 // ADMIN, USER
+	// private String role; // Enum을 쓰는게 좋음 --> 권한을 줄때 domain(범위)을 설정할 수 있음 //
+	// ADMIN, USER
 
 	// DB는 RoleType이라는게 없다
 	@Enumerated(EnumType.STRING)
 	private RoleType role; // Enum을 쓰는게 좋음 --> 권한을 줄때 domain(범위)을 설정할 수 있음 // ADMIN, USER
-	
+
+	// 내가 직접 시간을 넣으려면 Timestamp.valueOf(LocalDateTime.now())
 	@CreationTimestamp // 시간이 자동 입력
 	private Timestamp createDate;
 }

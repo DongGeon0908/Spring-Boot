@@ -50,6 +50,7 @@ public class Board {
 	@OneToMany(mappedBy = "board", fetch = FetchType.EAGER) // mappedBy 연관관계의 주인이 아니다. (FK가 아님), DB에 컬럼을 만들지 마시오
 	private List<Reply> reply;
 	 
+	// 내가 직접 시간을 넣으려면 Timestamp.valueOf(LocalDateTime.now())
 	@CreationTimestamp // 시간이 자동 입력
 	private Timestamp createDate;
 }

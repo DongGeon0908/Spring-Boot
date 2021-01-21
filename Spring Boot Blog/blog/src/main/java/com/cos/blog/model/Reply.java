@@ -39,6 +39,7 @@ public class Reply {
 	@JoinColumn(name = "userId")
 	private User user;
 
+	// 내가 직접 시간을 넣으려면 Timestamp.valueOf(LocalDateTime.now())
 	@CreationTimestamp // 시간이 자동 입력
 	private Timestamp createDate;
 }
