@@ -12,6 +12,9 @@ GRANT ALL PRIVILEGES ON *.* TO 'cos'@'%';
 CREATE DATABASE blog CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 use blog;
 
+# 데이터베이스 선택
+use blog;
+
 # 테이블 확인 명령어
 show tables;
 select * from user;
