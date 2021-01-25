@@ -1,5 +1,7 @@
 package com.cos.blog.repository;
 
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.cos.blog.model.User;
@@ -15,4 +17,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 // User findByUsernameAndPassword(String username, String password); 와 동일한 기능 제공	 
 //	@Query(value = "select * from user where username =? and password = ?", nativeQuery = true)
 //	User login(String username, String password);
+
+	// select * from user where username = ?;
+	Optional<User> findByUsername(String username);
 }
