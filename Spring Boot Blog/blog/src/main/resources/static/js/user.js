@@ -1,6 +1,6 @@
 let index = {
 	init: function() {
-		$("#btn-save").on("click", () => { 
+		$("#btn-save").on("click", () => {
 			this.save();
 		});
 		$("#btn-login").on("click", () => {
@@ -27,7 +27,7 @@ let index = {
 		$.ajax({
 			// 회원가입 수행 요청
 			type: "POST",
-			url: "/blog/api/user",
+			url: "/api/user",
 			data: JSON.stringify(data), // http body 데이터
 			contentType: "application/json; charset=utf-8", // body 데이터가 어떤 타입인지(MIME)
 			dataType: "json" // 요청을 서버로해서 응답이 왔을 때 기본적으로 모든 것이 문자열 (생긴게 JSON이라면) => javascript object로 변환
@@ -36,7 +36,7 @@ let index = {
 			alert("회원가입이 완료되었습니다.");
 			console.log(resp);
 			//alert(resp);
-			location.href = "/blog";
+			location.href = "/";
 		}).fail(function() {
 			// 회원가입 수행 실패
 			alert(JSON.stringify(error));
@@ -57,7 +57,7 @@ let index = {
 		$.ajax({
 			//로그인 수행 요청
 			type: "POST",
-			url: "/blog/api/user/login",
+			url: "/api/user/login",
 			data: JSON.stringify(data), // http body 데이터
 			contentType: "application/json; charset=utf-8", // body 데이터가 어떤 타입인지(MIME)
 			dataType: "json" // 요청을 서버로해서 응답이 왔을 때 기본적으로 모든 것이 문자열 (생긴게 JSON이라면) => javascript object로 변환
@@ -66,7 +66,7 @@ let index = {
 			alert("로그인이 완료되었습니다.");
 			console.log(resp);
 			//alert(resp);
-			location.href = "/blog";
+			location.href = "/";
 		}).fail(function() {
 			// 로그인 수행 실패
 			alert(JSON.stringify(error));
