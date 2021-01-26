@@ -14,7 +14,6 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
 
 import lombok.AllArgsConstructor;
@@ -40,7 +39,6 @@ public class Board {
 	@Lob // 대용량 데이터
 	private String content; // 섬모노트 라이브러리 -> 작성된 데이터가 <html> 태그가 섞여서 디자인됨
 
-	@ColumnDefault("0")
 	private int count; // 조회수
 
 	@ManyToOne(fetch = FetchType.EAGER) // Many = Board, User = One -> 한명의 유저는 다양한 게시글을 작성할 수 있음, 연관관계 설정
