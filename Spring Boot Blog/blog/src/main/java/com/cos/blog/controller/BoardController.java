@@ -1,6 +1,9 @@
 package com.cos.blog.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,9 +18,9 @@ public class BoardController {
 	private BoardService boardService;
 	
 	@GetMapping({ "", "/" })
-	public String index(Model model) { 
+	public String index(Model model, @PageableDefault(size=3, sort="id", direction=Sort.Direction.DESC) Pageable pageable ) { 
 		// /WEB-INF/views/index.jsp
-		model.addAttribute("boards", boardService.글목록());
+		model.addAttribute("boards", boardService.글목록(pageable));
 		return "index"; //viewResolver 작동!! 해당 인덱스 페이지에 model 정보를 갖고 감
 	}
 
