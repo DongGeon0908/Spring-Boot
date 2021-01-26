@@ -1,5 +1,7 @@
 package com.cos.blog.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,5 +23,9 @@ public class BoardService {
 		board.setCount(0);
 		board.setUserId(user);
 		boardRepository.save(board);
+	}
+
+	public List<Board> 글목록() {
+		return boardRepository.findAll();
 	}
 }

@@ -21,5 +21,9 @@
         height: 300
       });
  </script>
+ <!-- 
+ summernote api를 활용해 글쓰기 창을 만들 수 있음
+ summernote에서 알아서 사진, 및 데이터를 디비에 저장할 수 있는 값으로 변환시켜줌 ㅎㅎ
+  -->
 <script src ="/js/board.js"></script>
 <%@ include file="../layout/footer.jsp"%>
