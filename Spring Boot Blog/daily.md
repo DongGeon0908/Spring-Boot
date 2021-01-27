@@ -434,3 +434,14 @@ web.xml ->
 
   - 세션 
     + 스프링 시큐리티는 세션의 특정 공간을 할당에 시큐리티 컨텍스트라는 공간을 만든다. 해당 공간에 `Authentication` 객체가 만들어진다. `Authentication` 객체는 `AuthenticationManager`가 관리한다.
+
+- 카카오 로그인
+  + 카카오 디벨로퍼스에서 등록해야함
+
+- `OAuth`
+  + `open auth`
+  + 인증 처리를 대신 해줌
+
+- 스프링 공식 `OAuth` 주체
+  + 페이스북
+  + 구글
