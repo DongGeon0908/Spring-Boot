@@ -47,6 +47,9 @@ public class User {
 	@Enumerated(EnumType.STRING)
 	private RoleType role; // Enum을 쓰는게 좋음 --> 권한을 줄때 domain(범위)을 설정할 수 있음 // ADMIN, USER
 
+	// 로그인을 진행한 사용자가 어떤 방식을 사용했는지 확인 // kakao, google, baisc login...
+	private String oauth;
+	
 	// 내가 직접 시간을 넣으려면 Timestamp.valueOf(LocalDateTime.now())
 	@CreationTimestamp // 시간이 자동 입력
 	private Timestamp createDate;

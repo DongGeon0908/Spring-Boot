@@ -36,6 +36,7 @@ SET SQL_SAFE_UPDATES =0;
 
 # 투플 삭제
 delete from user;
+delete from board;
 commit;
 
 # 테이블 컬럼 속성 보기
