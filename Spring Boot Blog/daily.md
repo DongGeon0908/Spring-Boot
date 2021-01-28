@@ -445,3 +445,15 @@ web.xml ->
 - 스프링 공식 `OAuth` 주체
   + 페이스북
   + 구글
+
+
+- 추후 공부계획
+  + Validation Check
+  + Aop Log file
+  + Sentry.id > 휴대폰에서 바로 확인 가능
+  + Spring Security -  OAuth 2.0 - Client 페이스북, 구글 (공식 라이브러리)
+  + Spring Security -  OAuth 2.0 - Client 네이버 (비공식 라이브러리)
+  + Spring Security -  JWT 웹 토큰을 이용한 인증, 권한
+  + Spring Security - OAuth2.0 - Client - 페이스북, 구글 로그인 + JWT 이용
+  + Exception 처리
+  + Flutter 이용
