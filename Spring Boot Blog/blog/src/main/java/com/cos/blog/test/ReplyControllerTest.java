@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cos.blog.model.Board;
 import com.cos.blog.model.Reply;
 import com.cos.blog.repository.BoardRepository;
-import com.cos.blog.service.ReplyRepository;
+import com.cos.blog.repository.ReplyRepository;
 
 @RestController
 public class ReplyControllerTest {
