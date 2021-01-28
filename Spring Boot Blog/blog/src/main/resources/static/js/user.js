@@ -32,11 +32,15 @@ let index = {
 			contentType: "application/json; charset=utf-8", // body 데이터가 어떤 타입인지(MIME)
 			dataType: "json" // 요청을 서버로해서 응답이 왔을 때 기본적으로 모든 것이 문자열 (생긴게 JSON이라면) => javascript object로 변환
 		}).done(function(resp) {
-			// 회원가입 수행 성공
-			alert("회원가입이 완료되었습니다.");
-			console.log(resp);
-			//alert(resp);
-			location.href = "/";
+			if(resp.status == 500){
+				alert("회원가입을 실패했습니다.");
+			} else{
+				// 회원가입 수행 성공
+				alert("회원가입이 완료되었습니다.");
+				console.log(resp);
+				//alert(resp);
+				location.href = "/";	
+			}
 		}).fail(function() {
 			// 회원가입 수행 실패
 			alert(JSON.stringify(error));
