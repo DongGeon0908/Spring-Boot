@@ -13,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -49,6 +50,7 @@ public class Board {
 
 	@OneToMany(mappedBy = "board", fetch = FetchType.EAGER) // mappedBy 연관관계의 주인이 아니다. (FK가 아님), DB에 컬럼을 만들지 마시오
 	@JsonIgnoreProperties({"board"}) // 무한 참조를 막는 방법!!
+	@OrderBy("id desc") // 내림차순 정렬
 	private List<Reply> replys;
 	 
 	// 내가 직접 시간을 넣으려면 Timestamp.valueOf(LocalDateTime.now())

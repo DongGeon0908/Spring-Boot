@@ -1,5 +1,7 @@
 package com.cos.blog.test;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,7 +28,7 @@ public class ReplyControllerTest {
 	
 	@GetMapping("/test/reply")
 	public List<Reply> getReply() {
-		return boardRepository.findAll(); // jackson 라이브러리 - 오브젝트를 json으로 리턴 =>> 모델의 getter를 호출 
+		return replyRepository.findAll(); // jackson 라이브러리 - 오브젝트를 json으로 리턴 =>> 모델의 getter를 호출 
 	}
 	
 }
