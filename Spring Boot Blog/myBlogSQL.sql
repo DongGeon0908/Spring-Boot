@@ -49,4 +49,15 @@ FROM information_schema.table_constraints
 WHERE 'user';
 SELECT DISTINCT username FROM user;
 
+# 댓글 입력
+insert into reply(content, boardId, userId, createDate)
+values("첫번째 댓글", 1, 3, now());
 
+insert into reply(content, boardId, userId, createDate)
+values("두번째 댓글", 1, 3, now());
+
+insert into reply(content, boardId, userId, createDate)
+values("세번째 댓글", 1, 3, now());
+
+# 커밋
+commit;
