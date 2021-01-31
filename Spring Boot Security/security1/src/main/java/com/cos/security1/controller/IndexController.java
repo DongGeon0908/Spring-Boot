@@ -1,6 +1,8 @@
 package com.cos.security1.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -65,4 +67,20 @@ public class IndexController {
 		userRepository.save(user); // 회원가입 잘됨, 비밀번호 : 1234 => 시큐리티로 로그인할 수 없음. >> 패스워드가 암호화가 안되었기 때문
 		return "redirect:/loginForm";
 	}
+
+	// 권한을 하나 정의
+	@Secured("ROLE_ADMIN") // 계정 권한을 설정하는 것!
+	@GetMapping("/info")
+	public @ResponseBody String info() {
+		return "개인정보";
+	}
+	
+	// N개의 권한을 정의
+	@PreAuthorize("hasRole('ROLE_MANAGER') or hasRole('ROLE_ADMIN')")
+	@GetMapping("/data")
+	public @ResponseBody String data() {
+		return "데이터정보";
+	}
+	
+
 }

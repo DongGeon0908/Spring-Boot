@@ -10,3 +10,6 @@ show databases;
 desc user;
 
 select * from user;
+
+update user set role = "ROLE_MANAGER" where id=1;
+update user set role = "ROLE_ADMIN" where id=2;
