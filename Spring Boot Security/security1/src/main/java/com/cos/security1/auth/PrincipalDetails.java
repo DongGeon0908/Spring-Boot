@@ -23,11 +23,19 @@ import lombok.Data;
 @Data
 public class PrincipalDetails implements UserDetails, OAuth2User {
 
+	private User user; // 콤포지션
+	private Map<String, Object> attributes;
+
+	// 일반 로그인 생성자
 	public PrincipalDetails(User user) {
 		this.user = user;
 	}
 
-	private User user; // 콤포지션
+	// OAuth 로그인 생성자
+	public PrincipalDetails(User user, Map<String, Object> attributes) {
+		this.user = user;
+		this.attributes = attributes;
+	}
 
 	// 해당 User의 권한을 리턴하는 곳!!
 	@Override
@@ -76,17 +84,17 @@ public class PrincipalDetails implements UserDetails, OAuth2User {
 	@Override
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
-		
+
 		// 우리 사이트! 1년동안 회원이 로그인을 안하면 휴먼계정으로 변환
 		// 현재시간 - 로그인시간 => 1년 초과하면 return false; 로 지정
-		
+
 		return true;
 	}
 
 	@Override
 	public Map<String, Object> getAttributes() {
 		// TODO Auto-generated method stub
-		return null;
+		return attributes;
 	}
 
 	@Override
