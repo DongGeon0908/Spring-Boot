@@ -2,11 +2,11 @@ package com.cos.security1.config.oauth.provider;
 
 import java.util.Map;
 
-public class FacebookUserInfo implements OAuth2UserInfo {
+public class NaverUserInfo implements OAuth2UserInfo {
 
 	private Map<String, Object> attributes; // oauth2User.getAttributes()
 
-	public FacebookUserInfo(Map<String, Object> attributes) {
+	public NaverUserInfo(Map<String, Object> attributes) {
 		this.attributes = attributes;
 	}
 
@@ -19,7 +19,7 @@ public class FacebookUserInfo implements OAuth2UserInfo {
 	@Override
 	public String getProvider() {
 		// TODO Auto-generated method stub
-		return "facebook";
+		return "naver";
 	}
 
 	@Override

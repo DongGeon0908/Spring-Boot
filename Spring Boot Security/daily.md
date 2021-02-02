@@ -7,4 +7,9 @@
         * `OAuth` 로그인
     + 이 두개의 정보를 `PrincipalDetails`로 묶어서 처리
 
-    -- 11강
+- OAuth2-Client
+    + Spring Provider
+        * 구글
+        * 페이스북
+        * 트위터
+    + 네이버, 카카오는 지원X
