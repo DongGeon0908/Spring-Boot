@@ -82,3 +82,6 @@ BASE64(HS256암호화(LOWSIG))
 
 - `https://mvnrepository.com/`
     + 자바 라이브러리가 모여있는 사이트
+
+- `httpBasic().disable()`
+    + 토큰을 통해 로그인을 진행하므로 기존에 사용하던 `http` 방식을 미사용 설정한다.
