@@ -86,3 +86,13 @@
         * 시크릿키를 포함
     + `SHA256`
         * 해쉬
+
+- `JWT`
+```
+BASE64(HEADER).
+BASE64(PAYLOAD).
+BASE64(HS256암호화(LOWSIG))
+```        
+
+- `https://mvnrepository.com/`
+    + 자바 라이브러리가 모여있는 사이트
