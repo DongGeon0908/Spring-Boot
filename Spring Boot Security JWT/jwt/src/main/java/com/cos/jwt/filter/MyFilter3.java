@@ -36,7 +36,7 @@ public class MyFilter3 implements Filter {
 				out.println("인증 실패");
 			}
 		}
-		System.out.println("필터1");
+		System.out.println("필터3");
 	}
 
 }
