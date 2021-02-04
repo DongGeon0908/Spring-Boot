@@ -22,6 +22,7 @@ public class PrincipalDetailsService implements UserDetailsService {
 		// TODO Auto-generated method stub
 		System.out.println("PrincipalDetailsService의 loadUserByUsername()");
 		User userEntity = userRepository.findByUsername(username);
+		System.out.println("userEntity : " + userEntity);
 		return new PrincipalDetails(userEntity);
 	}
 
