@@ -20,5 +20,14 @@
 
 > [What is Spring Security?](https://github.com/DongGeon0908/Spring-Boot/tree/master/Spring%20Boot%20Security)
 
+<hr />
+
+### 본격적인 스프링 공부
+
+- 개발 환경
+    + [`Intellij`]()
+    + eclipse
+    + STS
+
 <br>
 
