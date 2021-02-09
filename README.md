@@ -25,9 +25,11 @@
 ### 본격적인 스프링 공부
 
 - 개발 환경
-    + [`Intellij`]()
+    + [`Intellij`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/Intellij.md)
+        * [`Gradle`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/Gradle.md)
     + eclipse
     + STS
+
 
 <br>
 
