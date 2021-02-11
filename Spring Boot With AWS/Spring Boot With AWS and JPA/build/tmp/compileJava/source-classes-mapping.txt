@@ -1,6 +1,11 @@
-com/benjamin/blog/springboot/Application.java
- com.benjamin.blog.springboot.Application
+com/benjamin/blog/springboot/domain/posts/PostsRepository.java
+ com.benjamin.blog.springboot.domain.posts.PostsRepository
 com/benjamin/blog/springboot/web/dto/HelloResponseDto.java
  com.benjamin.blog.springboot.web.dto.HelloResponseDto
 com/benjamin/blog/springboot/web/HelloController.java
  com.benjamin.blog.springboot.web.HelloController
+com/benjamin/blog/springboot/domain/posts/Posts.java
+ com.benjamin.blog.springboot.domain.posts.Posts
+ com.benjamin.blog.springboot.domain.posts.Posts$PostsBuilder
+com/benjamin/blog/springboot/Application.java
+ com.benjamin.blog.springboot.Application
