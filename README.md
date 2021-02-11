@@ -52,6 +52,9 @@
     + [`param`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/param.md)
         * [`@RequestParam`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/RequestParam.md)
     + [`jsonPath`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/jsonPath.md)
+    + [`SqlMapper`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/SqlMapper.md)
+    + [`ORM`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/ORM.md)
+        * [`JPA`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/JPA.md)
 
 - [`GIT`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/GIT.md)
     + [`.gitignore`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/SpringApplication.md)
