@@ -12,6 +12,6 @@
         <module name="Spring_Boot_With_AWS_and_JPA.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8" />
+    <bytecodeTargetLevel target="15" />
   </component>
 </project>

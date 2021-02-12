@@ -6,7 +6,6 @@ plugins { // (1)
 
 group 'com.benjamin.blog'
 version '1.0.4-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
-sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -19,12 +18,15 @@ test { // (2)
 }
 
 dependencies {
+    implementation('org.junit.jupiter:junit-jupiter:5.4.2')
+    implementation('org.projectlombok:lombok')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    implementation('com.h2database:h2')
+    implementation('org.springframework.boot:spring-boot-test:2.4.1')
+    implementation('org.springframework:spring-test:5.3.2')
+    implementation('org.assertj:assertj-core:3.18.1')
+    implementation('org.hamcrest:hamcrest:2.2')
 
-    compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.projectlombok:lombok')
-    compile('org.springframework.boot:spring-boot-starter-data-jpa')
-    compile('com.h2database:h2')
-    testCompile('org.springframework.boot:spring-boot-starter-test')
 
     //(3)
     implementation('org.springframework.boot:spring-boot-starter-web')
