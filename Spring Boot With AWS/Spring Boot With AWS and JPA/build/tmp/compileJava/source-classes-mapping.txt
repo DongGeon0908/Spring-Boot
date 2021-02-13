@@ -2,13 +2,16 @@ com/benjamin/blog/springboot/domain/posts/PostsRepository.java
  com.benjamin.blog.springboot.domain.posts.PostsRepository
 com/benjamin/blog/springboot/web/dto/HelloResponseDto.java
  com.benjamin.blog.springboot.web.dto.HelloResponseDto
+com/benjamin/blog/springboot/web/HelloController.java
+ com.benjamin.blog.springboot.web.HelloController
+com/benjamin/blog/springboot/web/dto/PostsUpdateRequestDto.java
+ com.benjamin.blog.springboot.web.dto.PostsUpdateRequestDto
+ com.benjamin.blog.springboot.web.dto.PostsUpdateRequestDto$PostsUpdateRequestDtoBuilder
 com/benjamin/blog/springboot/web/PostsApiControllerTest.java
  com.benjamin.blog.springboot.web.PostsApiControllerTest
 com/benjamin/blog/springboot/web/dto/PostsSaveRequestDto.java
  com.benjamin.blog.springboot.web.dto.PostsSaveRequestDto
  com.benjamin.blog.springboot.web.dto.PostsSaveRequestDto$PostsSaveRequestDtoBuilder
-com/benjamin/blog/springboot/web/HelloController.java
- com.benjamin.blog.springboot.web.HelloController
 com/benjamin/blog/springboot/domain/posts/Posts.java
  com.benjamin.blog.springboot.domain.posts.Posts
  com.benjamin.blog.springboot.domain.posts.Posts$PostsBuilder
@@ -16,5 +19,9 @@ com/benjamin/blog/springboot/service/posts/PostsService.java
  com.benjamin.blog.springboot.service.posts.PostsService
 com/benjamin/blog/springboot/Application.java
  com.benjamin.blog.springboot.Application
+com/benjamin/blog/springboot/domain/BaseTimeEntity.java
+ com.benjamin.blog.springboot.domain.BaseTimeEntity
 com/benjamin/blog/springboot/web/PostsApiController.java
  com.benjamin.blog.springboot.web.PostsApiController
+com/benjamin/blog/springboot/web/dto/PostsResponseDto.java
+ com.benjamin.blog.springboot.web.dto.PostsResponseDto
