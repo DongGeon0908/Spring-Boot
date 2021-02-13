@@ -34,6 +34,7 @@ dependencies {
 
     // lombok
     implementation('org.projectlombok:lombok')
+    implementation 'org.projectlombok:lombok:1.18.16'
     annotationProcessor('org.projectlombok:lombok')
     testImplementation('org.projectlombok:lombok')
     testAnnotationProcessor('org.projectlombok:lombok')
