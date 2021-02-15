@@ -1,5 +1,6 @@
-com/benjamin/blog/springboot/config/auth/SecurityConfig.java
- com.benjamin.blog.springboot.config.auth.SecurityConfig
+com/benjamin/blog/springboot/config/auth/dto/OAuthAttributes.java
+ com.benjamin.blog.springboot.config.auth.dto.OAuthAttributes
+ com.benjamin.blog.springboot.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
 com/benjamin/blog/springboot/web/dto/PostsListResponseDto.java
  com.benjamin.blog.springboot.web.dto.PostsListResponseDto
 com/benjamin/blog/springboot/web/dto/HelloResponseDto.java
@@ -36,10 +37,9 @@ com/benjamin/blog/springboot/web/dto/PostsSaveRequestDto.java
 com/benjamin/blog/springboot/domain/posts/Posts.java
  com.benjamin.blog.springboot.domain.posts.Posts
  com.benjamin.blog.springboot.domain.posts.Posts$PostsBuilder
-com/benjamin/blog/springboot/config/auth/CustomOAuth2UserService.java
- com.benjamin.blog.springboot.config.auth.CustomOAuth2UserService
-com/benjamin/blog/springboot/config/auth/dto/OAuthAttributes.java
- com.benjamin.blog.springboot.config.auth.dto.OAuthAttributes
- com.benjamin.blog.springboot.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
 com/benjamin/blog/springboot/web/dto/PostsResponseDto.java
  com.benjamin.blog.springboot.web.dto.PostsResponseDto
+com/benjamin/blog/springboot/config/auth/SecurityConfig.java
+ com.benjamin.blog.springboot.config.auth.SecurityConfig
+com/benjamin/blog/springboot/config/auth/CustomOAuth2UserService.java
+ com.benjamin.blog.springboot.config.auth.CustomOAuth2UserService
