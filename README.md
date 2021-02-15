@@ -79,6 +79,7 @@
         * [`@EntityListeners(AuditingEntityListener.class`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/EntityListeners.md)
         * [`@CreatedDate`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/CreatedDate.md)
         * [`@LastModifiedDate`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/LastModifiedDate.md)
+    + [`Spring Security`]((https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/SpringSecurity.md))
 
 - [`DATABASE`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/DATABASE.md)
     + [`h2`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/h2.md)
