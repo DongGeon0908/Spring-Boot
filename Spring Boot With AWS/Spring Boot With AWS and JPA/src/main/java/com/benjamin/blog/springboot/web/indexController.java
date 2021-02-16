@@ -1,6 +1,7 @@
 package com.benjamin.blog.springboot.web;
 
 
+import com.benjamin.blog.springboot.config.auth.LoginUser;
 import com.benjamin.blog.springboot.config.auth.dto.SessionUser;
 import com.benjamin.blog.springboot.service.posts.PostsService;
 import com.benjamin.blog.springboot.web.dto.PostsResponseDto;
@@ -17,18 +18,19 @@ import javax.servlet.http.HttpSession;
 public class indexController {
 
     private final PostsService postsService;
-    private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model){
+    public String index(Model model, @LoginUser SessionUser user){
         model.addAttribute("posts", postsService.findAllDesc());
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
         if(user != null){
             model.addAttribute("userName", user.getName());
         }
         return "index";
     }
 
+    // @LoginUser SessionUser user를 통해 어디에서도 세션 정보를 가져올 수 있음
+
+    
     @GetMapping("/posts/save")
     public String postsSave(){
         return "posts-save";
