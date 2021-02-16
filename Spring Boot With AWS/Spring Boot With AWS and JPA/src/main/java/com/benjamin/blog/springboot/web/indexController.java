@@ -11,7 +11,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import javax.servlet.http.HttpSession;
 
 @RequiredArgsConstructor
 @Controller
@@ -23,7 +22,7 @@ public class indexController {
     public String index(Model model, @LoginUser SessionUser user){
         model.addAttribute("posts", postsService.findAllDesc());
         if(user != null){
-            model.addAttribute("userName", user.getName());
+            model.addAttribute("usersName", user.getName()); //userName은 컴퓨터 사용자 이름 예약어!! 다른 이름으로 변경!
         }
         return "index";
     }

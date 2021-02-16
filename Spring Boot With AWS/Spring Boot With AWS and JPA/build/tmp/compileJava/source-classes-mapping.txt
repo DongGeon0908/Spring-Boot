@@ -6,8 +6,9 @@ com/benjamin/blog/springboot/web/dto/HelloResponseDto.java
  com.benjamin.blog.springboot.web.dto.HelloResponseDto
 com/benjamin/blog/springboot/web/HelloController.java
  com.benjamin.blog.springboot.web.HelloController
-com/benjamin/blog/springboot/config/WebConfig.java
- com.benjamin.blog.springboot.config.WebConfig
+com/benjamin/blog/springboot/domain/posts/Posts.java
+ com.benjamin.blog.springboot.domain.posts.Posts
+ com.benjamin.blog.springboot.domain.posts.Posts$PostsBuilder
 com/benjamin/blog/springboot/service/posts/PostsService.java
  com.benjamin.blog.springboot.service.posts.PostsService
 com/benjamin/blog/springboot/Application.java
@@ -25,10 +26,10 @@ com/benjamin/blog/springboot/domain/user/User.java
  com.benjamin.blog.springboot.domain.user.User$UserBuilder
 com/benjamin/blog/springboot/config/auth/LoginUser.java
  com.benjamin.blog.springboot.config.auth.LoginUser
-com/benjamin/blog/springboot/web/indexController.java
- com.benjamin.blog.springboot.web.indexController
-com/benjamin/blog/springboot/LoginUserArgumentResolver.java
- com.benjamin.blog.springboot.LoginUserArgumentResolver
+com/benjamin/blog/springboot/config/auth/LoginUserArgumentResolver.java
+ com.benjamin.blog.springboot.config.auth.LoginUserArgumentResolver
+com/benjamin/blog/springboot/web/dto/PostsResponseDto.java
+ com.benjamin.blog.springboot.web.dto.PostsResponseDto
 com/benjamin/blog/springboot/web/dto/PostsUpdateRequestDto.java
  com.benjamin.blog.springboot.web.dto.PostsUpdateRequestDto
  com.benjamin.blog.springboot.web.dto.PostsUpdateRequestDto$PostsUpdateRequestDtoBuilder
@@ -39,13 +40,12 @@ com/benjamin/blog/springboot/domain/posts/PostsRepository.java
 com/benjamin/blog/springboot/web/dto/PostsSaveRequestDto.java
  com.benjamin.blog.springboot.web.dto.PostsSaveRequestDto
  com.benjamin.blog.springboot.web.dto.PostsSaveRequestDto$PostsSaveRequestDtoBuilder
-com/benjamin/blog/springboot/domain/posts/Posts.java
- com.benjamin.blog.springboot.domain.posts.Posts
- com.benjamin.blog.springboot.domain.posts.Posts$PostsBuilder
+com/benjamin/blog/springboot/config/WebConfig.java
+ com.benjamin.blog.springboot.config.WebConfig
 com/benjamin/blog/springboot/config/auth/CustomOAuth2UserService.java
  com.benjamin.blog.springboot.config.auth.CustomOAuth2UserService
 com/benjamin/blog/springboot/config/auth/dto/OAuthAttributes.java
  com.benjamin.blog.springboot.config.auth.dto.OAuthAttributes
  com.benjamin.blog.springboot.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
-com/benjamin/blog/springboot/web/dto/PostsResponseDto.java
- com.benjamin.blog.springboot.web.dto.PostsResponseDto
+com/benjamin/blog/springboot/web/indexController.java
+ com.benjamin.blog.springboot.web.indexController

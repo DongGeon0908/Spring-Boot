@@ -1,6 +1,6 @@
 package com.benjamin.blog.springboot.config;
 
-import com.benjamin.blog.springboot.LoginUserArgumentResolver;
+import com.benjamin.blog.springboot.config.auth.LoginUserArgumentResolver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
@@ -14,7 +14,7 @@ public class WebConfig implements WebMvcConfigurer { // 리졸브가 스프링�
     private final LoginUserArgumentResolver loginUserArgumentResolver;
 
     @Override
-    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolver){
-        argumentResolver.add(loginUserArgumentResolver);
+    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers){
+        argumentResolvers.add(loginUserArgumentResolver);
     }
 }
