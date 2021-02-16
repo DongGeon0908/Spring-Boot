@@ -85,6 +85,7 @@
         * [`@Target`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/Target.md)
         * [`@interface`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/interface.md)
     + [`세션저장소`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/sessionRepository.md)
+    + [`WithMockUser`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/WithMockUser.md)
 
 - [`DATABASE`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/DATABASE.md)
     + [`h2`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/h2.md)

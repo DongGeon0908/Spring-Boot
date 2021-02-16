@@ -11,8 +11,8 @@ com/benjamin/blog/springboot/domain/posts/Posts.java
  com.benjamin.blog.springboot.domain.posts.Posts$PostsBuilder
 com/benjamin/blog/springboot/service/posts/PostsService.java
  com.benjamin.blog.springboot.service.posts.PostsService
-com/benjamin/blog/springboot/Application.java
- com.benjamin.blog.springboot.Application
+com/benjamin/blog/springboot/web/indexController.java
+ com.benjamin.blog.springboot.web.indexController
 com/benjamin/blog/springboot/domain/BaseTimeEntity.java
  com.benjamin.blog.springboot.domain.BaseTimeEntity
 com/benjamin/blog/springboot/domain/user/Role.java
@@ -47,5 +47,7 @@ com/benjamin/blog/springboot/config/auth/CustomOAuth2UserService.java
 com/benjamin/blog/springboot/config/auth/dto/OAuthAttributes.java
  com.benjamin.blog.springboot.config.auth.dto.OAuthAttributes
  com.benjamin.blog.springboot.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
-com/benjamin/blog/springboot/web/indexController.java
- com.benjamin.blog.springboot.web.indexController
+com/benjamin/blog/springboot/config/JpaConfig.java
+ com.benjamin.blog.springboot.config.JpaConfig
+com/benjamin/blog/springboot/Application.java
+ com.benjamin.blog.springboot.Application

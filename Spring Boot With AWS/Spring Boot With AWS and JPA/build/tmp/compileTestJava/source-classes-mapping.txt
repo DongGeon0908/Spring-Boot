@@ -1,10 +1,10 @@
-com/benjamin/blog/springboot/web/HelloControllerTest.java
- com.benjamin.blog.springboot.web.HelloControllerTest
-com/benjamin/blog/springboot/web/dto/HelloResponseDtoTest.java
- com.benjamin.blog.springboot.web.dto.HelloResponseDtoTest
-com/benjamin/blog/springboot/domain/posts/PostsRepositoryTest.java
- com.benjamin.blog.springboot.domain.posts.PostsRepositoryTest
 com/benjamin/blog/springboot/web/IndexControllerTest.java
  com.benjamin.blog.springboot.web.IndexControllerTest
 com/benjamin/blog/springboot/web/PostsApiControllerTest.java
  com.benjamin.blog.springboot.web.PostsApiControllerTest
+com/benjamin/blog/springboot/domain/posts/PostsRepositoryTest.java
+ com.benjamin.blog.springboot.domain.posts.PostsRepositoryTest
+com/benjamin/blog/springboot/web/dto/HelloResponseDtoTest.java
+ com.benjamin.blog.springboot.web.dto.HelloResponseDtoTest
+com/benjamin/blog/springboot/web/HelloControllerTest.java
+ com.benjamin.blog.springboot.web.HelloControllerTest
