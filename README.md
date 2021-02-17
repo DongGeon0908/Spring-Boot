@@ -106,7 +106,8 @@
 
 - Server
     + [`AWS`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/AWS.md)
-
+        * [`EC2`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/EC2.md)
+        * [`RDS`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/RDS.md)
 
 <br>
 
