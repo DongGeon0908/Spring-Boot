@@ -104,6 +104,9 @@
     + [`assertThat`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/assertThat.md)
         * [`isEqualTo`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/isEqualTo.md)
 
+- Server
+    + [`AWS`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring%20Boot%20With%20AWS/AWS.md)
+
 
 <br>
 
