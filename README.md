@@ -111,5 +111,8 @@
         * [`EC2`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/EC2.md)
         * [`RDS`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/RDS.md)
 
+- 단독 파일 만들기
+    + 해당 과정은 `intellj-gradle`을 사용할 경우 가능!!
+> Gradle - Tasks - build - bootjar 클릭시 -> 프로젝트 - libs에 스프링 단독 실행 파일 생성!!
 <br>
 
