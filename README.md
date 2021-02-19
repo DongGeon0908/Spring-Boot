@@ -22,6 +22,8 @@
 
 > [Spring Boot with AWS](https://github.com/DongGeon0908/Spring-Boot/tree/master/Spring-Boot-With-AWS)
 
+> [Spring Boot with JPA](https://github.com/DongGeon0908/Spring-Boot/tree/master/Spring%20Boot%20With%20JPA)
+
 <hr />
 
 ### 본격적인 스프링 공부
