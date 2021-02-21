@@ -63,6 +63,7 @@
         * [`DAO`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/DAO.md)
     + [`ORM`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/ORM.md)
         * [`JPA`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/JPA.md)
+        * [`Hibernate`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/Hibernate.md)
         * ['spring-boot-starter-data-jpa'](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/springbootstarterdatajpa.md)
         * [`@Entity`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/Entity.md)
         * [`Column`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/Column.md)
@@ -74,6 +75,8 @@
         * [`postsRepository.findAll`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/postsRepositoryfindAll.md)
         * [`영속성 컨텍스트`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/persistance.md)
         * [`@enumerated`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/enumerated.md)
+        * [`@Table`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/Table.md)
+
     + [`domain`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/domain.md)
     + [`API`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/API.md)
     + [`Spring Layer`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/SpringLayer.md)
