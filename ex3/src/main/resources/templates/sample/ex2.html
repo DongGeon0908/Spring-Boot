@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .target {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li th:each="dto : ${list}">
+            [[${dto}]]
+        </li>
+    </ul>
+<h1>--------------</h1>
+    <ul>
+        <li th:each="dto, state : ${list}">
+            [[${state.index}]] --- [[${dto}]]
+        </li>
+    </ul>
+    <h1>--------------</h1>
+    <ul>
+        <li th:each="dto, state : ${list}" th:if="${dto.sno % 5 == 0}">
+            [[${dto}]]
+        </li>
+    </ul>
+    <h1>--------------</h1>
+    <ul>
+        <li th:each="dto, state : ${list}">
+            <span th:if="${dto.sno % 5 == 0}" th:text="${'-----------' + dto.sno}"></span>
+            <span th:unless="${dto.sno % 5 == 0}" th:text="${dto.first}"></span>
+        </li>
+    </ul>
+    <h1>--------------</h1>
+    <ul>
+        <li th:each="dto, state : ${list}" th:text="${dto.sno % 5 == 0}?${dto.sno}">
+        </li>
+    </ul>
+    <h1>--------------</h1>
+    <ul>
+        <li th:each="dto, state : ${list}" th:text="${dto.sno % 5 == 0}?${dto.sno}: ${dto.first}">
+        </li>
+    </ul>
+    <h1>--------------</h1>
+    <ul>
+        <li th:each="dto, state : ${list}" th:class="${dto.sno % 5 == 0}?'target'" th:text="${dto}">
+        </li>
+    </ul>
+</body>
+
+</html>
