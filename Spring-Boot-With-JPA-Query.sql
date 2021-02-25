@@ -1,3 +1,3 @@
 SHOW TABLES;
 
-SELECT * FROM tbl_memo;
+SELECT * FROM guestbook;
