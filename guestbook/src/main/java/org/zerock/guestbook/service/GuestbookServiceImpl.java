@@ -87,7 +87,7 @@ public class GuestbookServiceImpl implements GuestbookService{
     }
 
     // Querydsl 처리
-    private BooleanBuilder getSearch(PageRequestDTO requestDTO){
+      private BooleanBuilder getSearch(PageRequestDTO requestDTO){
         String type = requestDTO.getType();
 
         BooleanBuilder booleanBuilder = new BooleanBuilder();

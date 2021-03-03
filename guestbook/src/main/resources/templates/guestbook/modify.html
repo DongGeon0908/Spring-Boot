@@ -11,8 +11,10 @@
 
         <!-- 페이지 번호 -->
             <input type="hidden" name="page" th:value="${requestDTO.page}">
+            <input type="hidden" name="type" th:value="${requestDTO.type}">
+            <input type="hidden" name="keyword" th:value="${requestDTO.keyword}">
 
-        <div class="form-group">
+            <div class="form-group">
             <label>Gno</label>
             <input type="text" class="form-control" name="gno" th:value="${dto.gno}" readonly > // 수정 불가
         </div>
@@ -86,8 +88,30 @@
                     .attr("method", "get");
 
                 console.log(actionForm.html()); // 먼저 확인 후에 주석 처리
-                actionForm.submit; // 확인 후에 주석 해제
+                actionForm.submit(); // 확인 후에 주석 해제
             });
+
+            $(".listBtn").click(function (){
+
+                //var pageInfo = $("input[name='page']");
+                var page = $("input[name='page']");
+                var type = $("input[name='type']");
+                var keyword = $("input[name='keyword']");
+
+
+                actionForm.empty(); // form 태그의 모든 내용을 지움
+
+                actionForm.append(page);
+                actionForm.append(type);
+                actionForm.append(keyword);
+
+                actionForm
+                    .attr("action", "/guestbook/list")
+                    .attr("method", "get");
+
+                actionForm.submit();
+            });
+
         </script>
     </th:block>
 

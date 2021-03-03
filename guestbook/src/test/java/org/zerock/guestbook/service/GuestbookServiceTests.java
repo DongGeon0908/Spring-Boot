@@ -63,7 +63,7 @@ public class GuestbookServiceTests {
         System.out.println("NEXT: " + resultDTO.isNext());
         System.out.println("TOTAL: " + resultDTO.getTotalPage());
 
-        System.out.println("--------------------------------------------------------");
+        System.out.println("----------                                ----------------------------------------------");
         for(GuestbookDTO guestbookDTO : resultDTO.getDtoList()){
             System.out.println(guestbookDTO);
         }
