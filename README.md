@@ -76,7 +76,7 @@
         * [`영속성 컨텍스트`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/persistance.md)
         * [`@enumerated`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/enumerated.md)
         * [`@Table`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/Table.md)
-        * [N:1]()
+        * [N:1](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/N-1.md)
 
     + [`domain`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/domain.md)
     + [`API`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/API.md)
