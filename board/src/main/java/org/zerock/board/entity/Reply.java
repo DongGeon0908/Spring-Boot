@@ -2,17 +2,14 @@ package org.zerock.board.entity;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@ToString
+@ToString(exclude = "board") // @ToString은 항상 exclude
 public class Reply extends BaseEntity{
 
     @Id
@@ -22,4 +19,7 @@ public class Reply extends BaseEntity{
     private String text;
 
     private String replyer;
+
+    @ManyToOne
+    private Board board; // 연관관계 지정
 }
