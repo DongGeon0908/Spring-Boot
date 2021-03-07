@@ -2,14 +2,14 @@
 
 > Spring Boot 개념과 프로젝트 진행 
 
-<br>
+<hr />
 
 ### ©CopyRight
 
 > Donggeon Kim
 > Department of Computer Engineering, Hanshin University
 
-<br>
+<hr />
 
 
 ### 📒Contents
