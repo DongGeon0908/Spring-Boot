@@ -6,6 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.zerock.board.dto.BoardDTO;
 import org.zerock.board.dto.PageRequestDTO;
 import org.zerock.board.dto.PageResultDTO;
+import org.zerock.board.entity.Board;
 
 @SpringBootTest
 public class BoardServiceTests {
@@ -50,8 +51,21 @@ public class BoardServiceTests {
     @Test
     public void testRemove() {
 
-        Long bno = 1L;
+        Long bno = 2L;
 
-        boardService.removeWithReplies(bno);
+         boardService.removeWithReplies(bno);
+    }
+
+    @Test
+    public void testModify() {
+
+        BoardDTO boardDTO = BoardDTO.builder()
+                .bno(3L)
+                .title("제목 변경합니다.2")
+                .content("내용 변경합니다.2")
+                .build();
+
+        boardService.modify(boardDTO);
+
     }
 }
