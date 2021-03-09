@@ -1,3 +1,3 @@
 SHOW TABLES;
 
-SELECT * FROM guestbook;
+SELECT * FROM board;

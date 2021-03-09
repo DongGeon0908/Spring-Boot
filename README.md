@@ -78,6 +78,7 @@
         * [`@Table`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/Table.md)
         * [N:1](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/N-1.md)
         * [fetch](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/fetch.md)
+        * [JPA Repository 확장](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/jparepositoryexpansion.md)
 
     + [`domain`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/domain.md)
     + [`API`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/API.md)
