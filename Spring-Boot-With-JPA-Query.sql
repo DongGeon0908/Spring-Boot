@@ -1,3 +1,9 @@
 SHOW TABLES;
 
-SELECT * FROM board;
+SELECT * FROM member;
+
+SELECT * FROM movie;
+
+SELECT * FROM movie_image;
+
+SELECT * FROM review;
