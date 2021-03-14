@@ -4,6 +4,8 @@ import com.zerock.mreview.entity.Member;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.stream.IntStream;
 
@@ -12,6 +14,9 @@ public class MemberRepositoryTests {
 
     @Autowired
     private MemberRepository memberRepository;
+
+    @Autowired
+    private ReviewRepository reviewRepository;
 
     @Test
     public void insertMembers() {
@@ -23,5 +28,23 @@ public class MemberRepositoryTests {
                     .nickname("reviewer" + i).build();
             memberRepository.save(member);
         });
+    }
+
+    @Commit
+    @Transactional
+    @Test
+    public void testDeleteMember(){
+
+        // Member의 mid
+        Long mid = 1L;
+
+        Member member = Member.builder().mid(mid).build();
+
+        //memberRepository.deleteById(mid);
+        //reviewRepository.deleteByMember(member);
+
+        // 순서 주의 FK -> PK
+        reviewRepository.deleteByMember(member);
+        memberRepository.deleteById(mid);
     }
 }
