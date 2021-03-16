@@ -5,11 +5,12 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
+@Embeddable
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@ToString(exclude = "movie") // 연관 관계 주의
+@ToString(exclude = "movie") //연관 관계시 항상 주의
 public class MovieImage {
 
     @Id

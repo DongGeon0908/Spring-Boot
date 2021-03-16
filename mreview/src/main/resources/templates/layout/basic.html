@@ -2,12 +2,16 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <th:block th:fragment="setContent(content)">
+    <head>
+
 <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
 
     <title>Simple Sidebar - Start Bootstrap Template</title>
 
@@ -20,6 +24,7 @@
     <!-- Bootstrap core JavaScript -->
     <script th:src="@{/vendor/jquery/jquery.min.js}"></script>
     <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
 </head>
 
 <body>
@@ -74,13 +79,19 @@
         </nav>
 
         <div class="container-fluid">
+
             <th:block th:replace = "${content}"></th:block>
+
         </div>
+
     </div>
     <!-- /#page-content-wrapper -->
 
 </div>
 <!-- /#wrapper -->
+
+
+
 
 <!-- Menu Toggle Script -->
 <script>
@@ -93,3 +104,4 @@
 </body>
 </th:block>
 </html>
+
