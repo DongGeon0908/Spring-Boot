@@ -16,6 +16,8 @@ public interface MovieService {
 
     Long register(MovieDTO movieDTO);
 
+    MovieDTO getMovie(Long mno);
+
     PageResultDTO<MovieDTO, Object[]> getList(PageRequestDTO requestDTO); //목록 처리
 
     default MovieDTO entitiesToDTO(Movie movie, List<MovieImage> movieImages, Double avg, Long reviewCnt){
