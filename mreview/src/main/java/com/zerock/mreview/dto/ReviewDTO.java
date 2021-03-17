@@ -1,4 +1,4 @@
-package com.zerock.mreview.controller;
+package com.zerock.mreview.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,32 +7,31 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class ReviewDTO {
 
-    // review num
+    //review num
     private Long reviewnum;
 
-    // Movie mno
+    //Movie mno
     private Long mno;
 
-    // Memver id
+    //Membmer id
     private Long mid;
-
-    // Member nickname
+    //Member nickname
     private String nickname;
-
-    // Member email
+    //Member email
     private String email;
 
     private int grade;
 
     private String text;
 
-    private LocalDateTime regDate;
+    private LocalDateTime regDate, modDate;
 
-    private LocalDateTime modDate;
+
 }

@@ -1,6 +1,6 @@
 package com.zerock.mreview.service;
 
-import com.zerock.mreview.controller.ReviewDTO;
+import com.zerock.mreview.dto.ReviewDTO;
 import com.zerock.mreview.entity.Movie;
 import com.zerock.mreview.entity.Review;
 import com.zerock.mreview.repository.ReviewRepository;

@@ -1,5 +1,5 @@
-package com.zerock.mreview.controller;
 
+import com.zerock.mreview.dto.ReviewDTO;
 import com.zerock.mreview.service.ReviewService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -17,45 +17,46 @@ public class ReviewController {
 
     private final ReviewService reviewService;
 
-     @GetMapping("/{mno}/all")
+    @GetMapping("/{mno}/all")
     public ResponseEntity<List<ReviewDTO>> getList(@PathVariable("mno") Long mno){
-        log.info("----------list----------");
+        log.info("--------------list---------------");
         log.info("MNO: " + mno);
 
         List<ReviewDTO> reviewDTOList = reviewService.getListOfMovie(mno);
 
         return new ResponseEntity<>(reviewDTOList, HttpStatus.OK);
-     }
+    }
 
-     @PostMapping("/{mno}")
+    @PostMapping("/{mno}")
     public ResponseEntity<Long> addReview(@RequestBody ReviewDTO movieReviewDTO){
-         log.info("--------------add MovieReview--------------");
-         log.info("reviewDTO: " + movieReviewDTO);
+        log.info("--------------add MovieReview---------------");
+        log.info("reviewDTO: " + movieReviewDTO);
 
-         Long reviewnum = reviewService.register(movieReviewDTO);
+        Long reviewnum = reviewService.register(movieReviewDTO);
 
-         return new ResponseEntity<>(reviewnum, HttpStatus.OK);
-     }
+        return new ResponseEntity<>( reviewnum, HttpStatus.OK);
+    }
 
-     @PutMapping("/{mno}/{reviewnum}")
-    public ResponseEntity<Long> modifyReview(@PathVariable Long reviewnum, @RequestBody ReviewDTO movieReviewDTO){
+    @PutMapping("/{mno}/{reviewnum}")
+    public ResponseEntity<Long> modifyReview(@PathVariable Long reviewnum,
+                                             @RequestBody ReviewDTO movieReviewDTO){
+        log.info("---------------modify MovieReview--------------" + reviewnum);
+        log.info("reviewDTO: " + movieReviewDTO);
 
-         log.info("---------------modify MovieReview-------------" + reviewnum);
-         log.info("reviewDTO: " + movieReviewDTO);
-         
-         reviewService.modify(movieReviewDTO);
-    
-         return new ResponseEntity<>(reviewnum, HttpStatus.OK);
-     }
+        reviewService.modify(movieReviewDTO);
 
-     @DeleteMapping("/{mno}/{reviewnum}")
-    public ResponseEntity<Long> removeReview(@PathVariable Long reviewnum){
-         log.info("-------------modify removeReview-------------");
+        return new ResponseEntity<>( reviewnum, HttpStatus.OK);
+    }
 
-         log.info("reviewnum: " + reviewnum);
+    @DeleteMapping("/{mno}/{reviewnum}")
+    public ResponseEntity<Long> removeReview( @PathVariable Long reviewnum){
+        log.info("---------------modify removeReview--------------");
+        log.info("reviewnum: " + reviewnum);
 
-         reviewService.remove(reviewnum);
+        reviewService.remove(reviewnum);
 
-         return new ResponseEntity<>(reviewnum, HttpStatus.OK);
-     }
+        return new ResponseEntity<>( reviewnum, HttpStatus.OK);
+    }
+
 }
+
