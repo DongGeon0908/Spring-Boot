@@ -14,6 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HttpControllerTest {
 
+	@GetMapping("/http/lombok")
+	public String lombokTest() {
+		
+		// 데이터를 추가할때 핃드의 순서를 지킬 필요 없음
+		Member m = Member.builder().username("hello").password("1234").email("wrjs@naver.com").build();
+		
+		return "완료";
+	}
+	
+	
 	// 인터넷 브라우저 요청은 무조건 get 요청만 가능
 	// http://localhost:8080/http/get -> select
 	@GetMapping("/http/get")
