@@ -43,6 +43,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // csrf 토큰 비활성화
         http.formLogin();
         http.csrf().disable();
+        
+        // 로그아웃 처리
+        http.logout();
     }
 
 }
