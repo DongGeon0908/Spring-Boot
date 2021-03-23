@@ -5,3 +5,8 @@ create user 'cosStudy'@'%' identified by 'cos1234';
 GRANT ALL PRIVILEGES ON *.* TO 'cosStudy'@'%';
 CREATE DATABASE blogStudy CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 use blogStudy;
+
+show variables like 'c%';
+
+
+drop database blogStudy;
