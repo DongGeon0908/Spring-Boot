@@ -17,17 +17,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
-        // 사용자 계정은 user1
-        auth.inMemoryAuthentication().withUser("user1")
-
-        // 1111 패스워드 인코딩 결과
-        .password("$2a$10$tvL31cpZvHo2A.JtVzgnleniEM.Wr3lrjdPYHhBBLpY/4fNq.Mn6u").roles("USER");
-
-    }
     
     // HttpSecurity 타입으로 접근 제한 처리
     @Override
@@ -40,12 +29,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // 인가 및 인증에서 문제가 발생하면 로그인 화면으로 전환
         http.formLogin();
 
-        // csrf 토큰 비활성화
-        http.formLogin();
-        http.csrf().disable();
-        
-        // 로그아웃 처리
-        http.logout();
     }
 
 }
