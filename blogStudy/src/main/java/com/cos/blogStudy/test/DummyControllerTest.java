@@ -1,8 +1,13 @@
 package com.cos.blogStudy.test;
 
+import java.util.List;
 import java.util.function.Supplier;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +23,26 @@ import com.cos.blogStudy.repository.UserRepository;
 public class DummyControllerTest {
 	
 	@Autowired // 의존성 주입
-	private UserRepository UserRepository;
+	private UserRepository userRepository;
+	
+	// http://localhost:8000/blog/dummy/user
+	@GetMapping("/dummy/users")
+	public List<User> list(){
+		return userRepository.findAll();
+	}
+	
+	//한 페이지당 2건에 데이터를 리턴받아 볼 예정
+	@GetMapping("/dummy/user/page")
+	public List<User> pageList(@PageableDefault(size=1, sort="id", direction = Sort.Direction.DESC) Pageable pageable){
+		Page<User> pagingUser = userRepository.findAll(pageable);
+		
+		
+		
+		
+		List<User> users = pagingUser.getContent();
+		
+		return users;
+	}
 
 	// {id} 주소로 파라미터를 전달 받음
 	// http://localhost:8000/blog/dummy/user/3
@@ -31,7 +55,7 @@ public class DummyControllerTest {
 		 */
 		
 		
-		User user = UserRepository.findById(id).orElseThrow(new Supplier<IllegalArgumentException>() {
+		User user = userRepository.findById(id).orElseThrow(new Supplier<IllegalArgumentException>() {
 
 			@Override
 			public IllegalArgumentException get() {
@@ -70,7 +94,7 @@ public class DummyControllerTest {
 		System.out.println("createDate : " + user.getCreateDate());
 		
 		user.setRole(RoleType.USER);
-		UserRepository.save(user);
+		userRepository.save(user);
 		return "회원가입 완료";
 	}
 }
