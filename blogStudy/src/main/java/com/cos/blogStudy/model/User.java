@@ -17,13 +17,14 @@ import org.hibernate.annotations.DynamicInsert;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 /* ORM이란
  * JAVA 등의 언어 Object - > 테이블로 매핑해주는 기술 
  */
 
-
+// @Getter
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -36,7 +37,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // 프로젝트에서 연결된 데이터베이스의 넘버링 전략
 	private int id; // auto-increment
 
-	@Column(nullable = false, length = 30)
+	@Column(nullable = false, length = 30, unique = true)
 	private String username; // ID
 
 	@Column(nullable = false, length = 100) // 해쉬값이 들어가서 길이가 길어야함

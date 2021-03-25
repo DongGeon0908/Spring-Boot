@@ -6,7 +6,9 @@ GRANT ALL PRIVILEGES ON *.* TO 'cosStudy'@'%';
 CREATE DATABASE blogStudy CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 use blogStudy;
 
-show variables like 'c%';
+show tables;
 
+show variables like 'c%';
+SELECT VERSION();
 
 drop database blogStudy;

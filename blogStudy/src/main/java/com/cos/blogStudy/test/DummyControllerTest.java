@@ -55,7 +55,7 @@ public class DummyControllerTest {
 		});
 
 		user.setPassword(requestUser.getPassword());
-		user.setEmail(requestUser.getEmail());
+		//user.setEmail(requestUser.getEmail());
 
 		// save()는 id를 전달하지 않으면 insert
 		// save()는 id를 전달하고, id에 대한 데이터가 있으면 update
@@ -75,7 +75,7 @@ public class DummyControllerTest {
 	}
 
 	// 한 페이지당 2건에 데이터를 리턴받아 볼 예정
-	@GetMapping("/dummy/user/page")
+	@GetMapping("/dummy/user")
 	public List<User> pageList(
 			@PageableDefault(size = 1, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
 		Page<User> pagingUser = userRepository.findAll(pageable);
