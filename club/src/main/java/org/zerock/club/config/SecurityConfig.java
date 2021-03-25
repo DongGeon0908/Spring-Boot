@@ -28,7 +28,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         // 인가 및 인증에서 문제가 발생하면 로그인 화면으로 전환
         http.formLogin();
+        http.csrf().disable();
 
+        http.oauth2Login();
     }
 
 }
