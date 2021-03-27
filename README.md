@@ -24,6 +24,22 @@
 
 > [Spring Boot with JPA](https://github.com/DongGeon0908/Spring-Boot/tree/master/Spring%20Boot%20With%20JPA)
 
+> [JPA를 통해 기본적인 C.R.U.D를 적용](https://github.com/DongGeon0908/Spring-Boot/tree/master/guestbook)
+
+> [댓글 구현 방법](https://github.com/DongGeon0908/Spring-Boot/tree/master/mreview)
+
+> [Thymeleaf 적용한 Web_1](https://github.com/DongGeon0908/Spring-Boot/tree/master/ex2)
+
+> [Thymeleaf 적용한 Web_1](https://github.com/DongGeon0908/Spring-Boot/tree/master/ex3)
+
+> [OAuth 2.0 적용한 로그인](https://github.com/DongGeon0908/Spring-Boot/tree/master/club)
+
+> [JPA를 통해 게시판 기능 구현](https://github.com/DongGeon0908/Spring-Boot/tree/master/board)
+
+> [JWT 암호화 방식](https://github.com/DongGeon0908/Spring-Boot/tree/master/Spring%20Boot%20Security%20JWT)
+
+> [Blog 구현 SpringBoot](https://github.com/DongGeon0908/Spring-Boot/tree/master/blogStudy)
+
 <hr />
 
 ### 본격적인 스프링 공부
