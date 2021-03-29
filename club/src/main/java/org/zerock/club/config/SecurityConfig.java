@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.zerock.club.security.filter.ApiCheckFilter;
 import org.zerock.club.security.handler.ClubLoginSuccessHandler;
 import org.zerock.club.security.service.ClubUserDetailsService;
 
@@ -44,6 +45,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public ClubLoginSuccessHandler successHandler(){
         return new ClubLoginSuccessHandler(passwordEncoder());
+    }
+
+    // 로그가 기록됨
+    @Bean
+    public ApiCheckFilter apiCheckFilter() {
+        return new ApiCheckFilter(); 
     }
 
 }
