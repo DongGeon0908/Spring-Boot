@@ -10,3 +10,6 @@
 - `OncePerRequestFilter`
     + 추상 클래스로 제공되는 필터
         * 가장 기본적인 필터
+
+- `AntPathMatcher`
+    + 엔트 패턴 `Ant Pattern`은 중간에 `?,*,**`와 같은 기호를 이용해서 패턴을 표시)에 맞는지를 검사하는 유틸리티
