@@ -34,6 +34,8 @@
 
 > [OAuth 2.0 적용한 로그인](https://github.com/DongGeon0908/Spring-Boot/tree/master/club)
 
+> [JWT를 적용한 API Server](https://github.com/DongGeon0908/Spring-Boot/tree/master/club)
+
 > [JPA를 통해 게시판 기능 구현](https://github.com/DongGeon0908/Spring-Boot/tree/master/board)
 
 > [JWT 암호화 방식](https://github.com/DongGeon0908/Spring-Boot/tree/master/Spring%20Boot%20Security%20JWT)
@@ -141,3 +143,11 @@
 > Gradle - Tasks - build - bootjar 클릭시 -> 프로젝트 - libs에 스프링 단독 실행 파일 생성!!
 <br>
 
+### 🔗Reference
+- 코드로 배우는 스프링 부트 웹 프로젝트
+- 자바 웹을 다루는 기술
+- 코드로 배우는 스프링 웹 프로젝트
+- 스프링 부트와 AWS로 혼자 구현하는 웹 서비스
+- 스프링 부트 시큐리티 특강 - 구름에듀
+- 스프링 부트 나만의 블로그 만들기 - 구름에듀
+- 스프링 부트 개념정리 - 구름에듀 
