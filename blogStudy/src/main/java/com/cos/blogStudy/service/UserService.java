@@ -22,8 +22,8 @@ public class UserService {
 	}
 
 	// 하나의 트랜잭션으로 작동!
-	@Transactional(readOnly = true) // select할 때 트랜잭션 시작, 서비스 종료시에 트랜잭션 종료 --> 정합성 지킴
-	public User 로그인(User user) {
-		return userRepository.findByUsernameAndPassword(user.getUsername(), user.getPassword());
-	}
+	//@Transactional(readOnly = true) // select할 때 트랜잭션 시작, 서비스 종료시에 트랜잭션 종료 --> 정합성 지킴
+	//public User 로그인(User user) {
+	//	return userRepository.findByUsernameAndPassword(user.getUsername(), user.getPassword());
+	//}
 }

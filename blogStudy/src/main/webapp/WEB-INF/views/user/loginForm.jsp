@@ -5,22 +5,22 @@
 
 
 <div class="container">
-	<form>
+	<form action ="#" method="post">
 		<div class="form-group">
 			<label for="username">Username:</label> <input type="text"
-				class="form-control" placeholder="Enter Username" id="username">
+				name="username" class="form-control" placeholder="Enter Username" id="username">
 		</div>
 		<div class="form-group">
 			<label for="pwd">Password:</label> <input type="password"
-				class="form-control" placeholder="Enter password" id="password">
+				name="password" class="form-control" placeholder="Enter password" id="password">
 		</div>
 		<div class="form-group form-check">
 			<label class="form-check-label"> <input
-				class="form-check-input" type="checkbox"> Remember me
+				name="remember" class="form-check-input" type="checkbox"> Remember me
 			</label>
 		</div>
-	</form>
 		<button id="btn-login" class="btn btn-primary">회원가입완료</button>
+	</form>
 </div>
 
 <script src="/js/user.js"></script>

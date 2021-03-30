@@ -38,9 +38,9 @@
 				<c:when test="${empty principal}">
 					<ul class="navbar-nav">
 						<li class="nav-item"><a class="nav-link"
-							href="/loginForm">Login</a></li>
+							href="/auth/loginForm">Login</a></li>
 						<li class="nav-item"><a class="nav-link"
-							href="/joinForm">Sign</a></li>
+							href="/auth/joinForm">Sign</a></li>
 					</ul>
 				</c:when>
 				<c:otherwise>
