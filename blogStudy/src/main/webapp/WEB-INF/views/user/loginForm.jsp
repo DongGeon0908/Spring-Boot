@@ -5,7 +5,7 @@
 
 
 <div class="container">
-	<form action ="#" method="post">
+	<form action ="/auth/loginProc" method="post">
 		<div class="form-group">
 			<label for="username">Username:</label> <input type="text"
 				name="username" class="form-control" placeholder="Enter Username" id="username">
@@ -19,7 +19,7 @@
 				name="remember" class="form-check-input" type="checkbox"> Remember me
 			</label>
 		</div>
-		<button id="btn-login" class="btn btn-primary">회원가입완료</button>
+		<button id="btn-login" class="btn btn-primary">Login</button>
 	</form>
 </div>
 
