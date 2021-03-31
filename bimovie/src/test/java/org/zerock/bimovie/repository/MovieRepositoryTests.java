@@ -16,6 +16,7 @@ import org.zerock.bimovie.entity.Poster;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
+
 @SpringBootTest
 @Log4j2
 public class MovieRepositoryTests {
@@ -122,8 +123,8 @@ public class MovieRepositoryTests {
 
         Page<Object[]> result = movieRepository.findAll3(pageable);
 
-        result.getContent().forEach(a -> {
-            log.info(Arrays.toString(a));
+        result.getContent().forEach(arr -> {
+            log.info(Arrays.toString(arr));
 
             log.info("------------------------------------");
         });

@@ -24,7 +24,7 @@ public class Movie extends BaseEntity {
     private String title;
 
     @Builder.Default
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "movie", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "movie", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Poster> posterList = new ArrayList<>();
 
     public void addPoster(Poster poster){
