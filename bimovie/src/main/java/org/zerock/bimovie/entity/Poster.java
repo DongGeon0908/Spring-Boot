@@ -24,4 +24,12 @@ public class Poster {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Movie movie;
+
+    public void setIdx(int idx){
+        this.idx = idx;
+    }
+
+    public void setMovie(Movie movie){
+        this.movie = movie;
+    }
 }
