@@ -22,7 +22,7 @@ public class Movie extends BaseEntity {
     private String title;
 
     @Builder.Default
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "movie")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "movie", cascade = CascadeType.ALL)
     private List<Poster> posterList = new ArrayList<>();
 
     public void addPoster(Poster poster){
