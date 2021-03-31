@@ -10,15 +10,14 @@ import com.cos.blogStudy.model.User;
 
 // 스프링 시큐리가 로그인 요청을 가로채서 로그인을 진행하고 완료가 되면 UserDetails 타입의 오브젝트를
 // 스프링 시큐리티의 고유한 세션저장소에 저장
-public class PrincipalDetail implements UserDetails{
+public class PrincipalDetail implements UserDetails {
 	private User user; // 콤포지션
 
 	public PrincipalDetail(User user) {
 		// TODO Auto-generated constructor stub
 		this.user = user;
 	}
-	
-	
+
 	@Override
 	public String getPassword() {
 		// TODO Auto-generated method stub
@@ -62,18 +61,23 @@ public class PrincipalDetail implements UserDetails{
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
-		
+
 		Collection<GrantedAuthority> collectors = new ArrayList<>();
-		collectors.add(new GrantedAuthority() {
-			
-			@Override
-			public String getAuthority() {
-				// TODO Auto-generated method stub
-				return "ROLE_" + user.getRole(); // ROLE_USER
-			}
+//		collectors.add(new GrantedAuthority() {
+//			
+//			@Override
+//			public String getAuthority() {
+//				// TODO Auto-generated method stub
+//				return "ROLE_" + user.getRole(); // ROLE_USER
+//			}
+//		});
+
+		// 위의 코드를 람다식으로 표현
+		collectors.add(() -> {
+			return "ROLE_" + user.getRole();
 		});
-		
+
 		return collectors;
 	}
-	
+
 }

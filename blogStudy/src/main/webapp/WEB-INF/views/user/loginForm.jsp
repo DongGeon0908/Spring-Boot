@@ -22,7 +22,8 @@
 		<button id="btn-login" class="btn btn-primary">Login</button>
 	</form>
 </div>
-
+<!-- 
 <script src="/js/user.js"></script>
+-->
 <%@ include file="../layout/footer.jsp"%>
 
