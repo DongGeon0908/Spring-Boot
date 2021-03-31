@@ -44,4 +44,18 @@ public class MovieRepositoryTests {
 
         movieRepository.save(movie);
     }
+
+    @Test
+    @Transactional
+    @Commit
+    public void testRemovePoster() {
+
+        Movie movie = movieRepository.getOne(1L);
+
+        movie.removePoster(2L);
+
+        movieRepository.save(movie);
+
+    }
+
 }
