@@ -42,6 +42,8 @@
 
 > [Blog 구현 SpringBoot](https://github.com/DongGeon0908/Spring-Boot/tree/master/blogStudy)
 
+> [M:N // 1:N](https://github.com/DongGeon0908/Spring-Boot/tree/master/bimovie)
+
 <hr />
 
 ### 본격적인 스프링 공부
