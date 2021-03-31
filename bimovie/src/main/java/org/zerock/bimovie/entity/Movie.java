@@ -1,5 +1,6 @@
 package org.zerock.bimovie.entity;
 
+
 import lombok.*;
 
 import javax.persistence.*;
