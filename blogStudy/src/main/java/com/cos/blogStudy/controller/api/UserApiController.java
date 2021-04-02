@@ -37,6 +37,13 @@ public class UserApiController {
 		// 자바 오브젝트를 JSON으로 변환해서 리턴 --> Jackson
 
 	}
+	
+	// key = value, x-www-from-urlencoded
+	@PutMapping("/user")
+	public ResponseDto<Integer> update(@RequestBody User user){
+		userService.회원수정(user);
+		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
+	}
 
 	
 //	// 전통적인 방식의 로그인 방법
