@@ -75,11 +75,13 @@
 
 - ENV
   - [`Intellij`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/Intellij.md)
-    - [`Gradle`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/Gradle.md)
   - [`eclipse`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/eclipse.md)
   - [`STS`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/STS.md)
   - [`WAS`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/WAS.md)
     - [`내장 WAS`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/InnerWAS.md)
+  - 프로젝트 관리 도구
+    - [`Gradle`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/Gradle.md)
+    - [`Maven`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/Maven.md)
 - Dev
 
   - [`@SpringApplication`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/SpringApplication.md)
