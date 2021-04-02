@@ -1,0 +1,56 @@
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        // concat, filter, map, sclice, 스프레드(전개) 연산자
+    const a = [1,2,3];
+    
+    // 얕은 복사
+    const z = a;
+
+    // 깊은 복사 -> 스프레드 연산자
+    console.log("1. ====================== 스프레드 연산자");
+    const b = [...a];
+    b.push(4); // b의 데이터 변경
+    console.log(`a의 값은 : ${a}`);
+    console.log(`b의 값은 : ${b}`);
+
+    console.log("2. ====================== 추가하기");
+    const a2 = [1,2,3];
+    const b2 = a2.concat(4);
+    console.log(`a2의 값은 : ${a2}`);
+    console.log(`b2의 값은 : ${b2}`);
+    const c = [0, ...a, 4];
+    console.log(`b의 값은 : ${c}`);
+
+    console.log("3. ====================== 걸러내기");
+    const a3 = [1,2,3];
+    const b3 = a3.filter((n)=>{
+        return n != 1;
+    }); // boolean을 return 받는다 --> true만 걸러냄
+    console.log(`b3의 값은 ${b3}`);
+
+    console.log("4. ====================== 잘라내기");
+    const a4 = [1,2,3];
+    const b4 = a4.slice(0,2);
+    console.log(`b4의 값은 ${b4}`); //[1,2]
+    const c4 = [...a4.slice(0,2), 4, ...a4.slice(2,3)];
+    console.log(`c4의 값은 ${c4}`); 
+
+    console.log("5. ====================== 반복하기");
+    const a5 = [1,2,3];
+
+    // forEach는 리턴이 불가능 --> 데이터가 보여지지 않음
+    a5.forEach((k)=>{
+        console.log(k);
+    });
+
+    // map()은 리턴이 가능 --> 데이터가 보임!!
+    const b5 = a5.map((k)=>k); // const b5 = [...a5];
+    console.log(b5)
+
+    </script>
+  </body>

@@ -10,20 +10,14 @@ import './App.css';
 var c = 10; // 변수의 scope가 꼬임
 
 function App() {
-  let a = 10; // 변수
-const b = 20; // 상수
-  let d = undefined; // 적용되지 않은 값
-
-const mystyle = {
-  color: "red",
-};
+  let list = [1,2,3];
 
   return (
-   <div>
-     
-     <div style={mystyle}>안녕{ a === 10 ? "10입니다." : "10이 아닙니다."}</div>
-    <h1 className="box-style">해딩테그{b === 20 && "20입니다."}</h1>
-   </div>
+    <div>
+      <div>
+        {list.map(n=> <h1>{n}</h1>)}
+      </div>
+    </div>
   );
 }
 
