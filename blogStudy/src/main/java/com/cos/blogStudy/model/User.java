@@ -34,7 +34,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // 프로젝트에서 연결된 데이터베이스의 넘버링 전략
 	private int id; // auto-increment
 
-	@Column(nullable = false, length = 30, unique = true)
+	@Column(nullable = false, length = 100, unique = true)
 	private String username; // ID
 
 	@Column(nullable = false, length = 100) // 해쉬값이 들어가서 길이가 길어야함
@@ -43,9 +43,12 @@ public class User {
 	@Column(nullable = false, length = 50)
 	private String email;
 
-	//@ColumnDefault("'user'")
+	// @ColumnDefault("'user'")
 	@Enumerated(EnumType.STRING) // DB에 해당 타입이 없기 때문에
 	private RoleType role; // 추후 Enum으로 바꾸기*-*-0
+
+	// kakao, goole 등
+	private String oauth;
 
 	@CreationTimestamp // 시간이 자동으로 입력되도록 하는 어노테이션
 	private Timestamp createDate;
