@@ -52,5 +52,25 @@
     const b5 = a5.map((k)=>k); // const b5 = [...a5];
     console.log(b5)
 
+    const data = {phone:"2222"};
+    const a6 = {id:1, name:"김동건",phone:"1111"};
+    const b6 = {...a6, data};
+    console.log(b6);
+
+    const users = [
+        {id:1, name:"김동건", phone:"01031829709"},
+        {id:2, name:"김동진", phone:"01031829708"},
+        {id:3, name:"김동순", phone:"01031828709"}
+    ];
+
+    const updataUserDto = {
+        id:2, name:"홍길동"
+    };
+
+    const newUsers = users.map(u => u.id === updataUserDto.id ? {...u, ...updataUserDto} : u); // const newUsers = {...users};
+    console.log("newUsers", newUsers);
+
+    
+
     </script>
   </body>
