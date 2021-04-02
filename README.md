@@ -56,30 +56,22 @@
     - 특정한 인터페이스를 구현하거나 상속을 받을 필요가 없는 가벼운 객체를 관리
 
   + `IOC`
-
     + `Inversion of Controle`
       + 경량 컨테이너 `Light-Weight Controller`
       + 필요에 따라 스프링 프레임워크에서 사용자의 코드를 호출
       + 일반 오브젝트의 생애 주기 관리나, 오브젝트 간의 의존관계를 해결하는 아키텍처를 구현
-
   + `DI AOP`
-
     + `DI`
-
       + 각각의 계층이나 서비스들 간에 의존성이 존재할 경우 프레임워크가 서로 연결시켜줌
         + 변경 용이성
         + 확장성
         + 품질관리 용이
-
     + `AOP`
-
       + 트랜잭션이나 로깅, 보안과 같이 여러 모듈에서 공통적으로 사용하는 기능의 경우 해당 기능을 분리하여 관리
-
         + 프로그램 가독성
-
         + 기술 은닉
 
-          <hr />
+  <hr />
 
 - ENV
   - [`Intellij`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/Intellij.md)
@@ -119,8 +111,7 @@
   - [`SqlMapper`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/SqlMapper.md)
     - [`DAO`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/DAO.md)
   - [`ORM`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/ORM.md)
-
-    - [`JPA`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/JPA.md)
+  - [`JPA`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/JPA.md)
     - [`Hibernate`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/Hibernate.md)
     - ['spring-boot-starter-data-jpa'](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/springbootstarterdatajpa.md)
     - [`@Entity`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/Entity.md)
@@ -134,11 +125,11 @@
     - [`영속성 컨텍스트`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/persistance.md)
     - [`@enumerated`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/enumerated.md)
     - [`@Table`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/Table.md)
-    - [N:1](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/N-1.md)
-    - [M:N](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/M-N.md)
-    - [fetch](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/fetch.md)
-    - [JPA Repository 확장](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/jparepositoryexpansion.md)
-
+    - [`N:1`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/N-1.md)
+    - [`M:N`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/M-N.md)
+    - [`fetch`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/fetch.md)
+    - [`JPA Repository 확장`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/jparepositoryexpansion.md)
+    
   - [`domain`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/domain.md)
   - [`API`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/API.md)
     - [`Filter for API`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/FilterFORAPI.md)
