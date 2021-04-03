@@ -23,14 +23,25 @@ function App() {
       {id:3, name:"동건"},
       {id:4, name:"건"},
     ];
-
     setUsers([...sample]);
   }
+
+  //const [users, setUsers] = useState(sample); // 레퍼런스가 변경되야 동작
+
+  const download = () => {
+    const a = sample.concat({id:5, name: "조자룡"});
+    setUsers(a);
+  };
 
   // 랜더링 시점 = 상태값 변경
   return (
     <div>
       <button onClick={download}>다운로드</button>
+      {users.map((u)=>(
+        <h1>
+          {u.id}, {u.name}
+        </h1>
+      ))}
     </div>
   );
 }
