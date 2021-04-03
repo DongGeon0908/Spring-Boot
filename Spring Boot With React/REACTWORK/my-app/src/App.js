@@ -12,24 +12,25 @@ import Sub from './Sub';
 var c = 10; // 변수의 scope가 꼬임
 
 function App() {
-  let list = [1,2,3];
+ 
+  // 다운로드 받음
+  const[users, setUsers] = useState([{id:5, name:"덮어씌우기"}]);
 
-  // let number = 1; // 상태 값
-  const[number, setNumber] = useState(2); // useState()는 hooks 문법
+  const download =() => {
+    let sample = [
+      {id:1, name:"김동건"},
+      {id:2, name:"김건"},
+      {id:3, name:"동건"},
+      {id:4, name:"건"},
+    ];
 
-  const add =()=>{
-    setNumber(number + 1); // 리엑트한테 number 값 변경한다고 요청
-    console.log("add", number);
+    setUsers([...sample]);
   }
 
   // 랜더링 시점 = 상태값 변경
   return (
     <div>
-      <div>
-       <h1>숫자 : {number}</h1>
-       <button onClick={add}>더하기</button>
-       <Sub/>
-      </div>
+      <button onClick={download}>다운로드</button>
     </div>
   );
 }
