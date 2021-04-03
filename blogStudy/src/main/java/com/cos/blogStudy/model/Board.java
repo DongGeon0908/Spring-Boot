@@ -13,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
@@ -50,6 +51,7 @@ public class Board {
 	
 	@OneToMany(mappedBy = "board", fetch = FetchType.EAGER) // 연관관계의 주인이 아니다. -> FK가 아니다 -> DB에 컬럼을 만들지 않음
 	@JsonIgnoreProperties({"board"}) // 무한 참조를 막는 방법!!
+	@OrderBy("id desc") // 정렬
 	private List<Reply> replys;
 	
 	@CreationTimestamp

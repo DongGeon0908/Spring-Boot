@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cos.blogStudy.config.auth.PrincipalDetail;
 import com.cos.blogStudy.dto.ResponseDto;
 import com.cos.blogStudy.model.Board;
+import com.cos.blogStudy.model.Reply;
 import com.cos.blogStudy.model.User;
 import com.cos.blogStudy.service.BoardService;
 import com.cos.blogStudy.service.UserService;
@@ -51,6 +52,17 @@ public class BoardApiController {
 		boardService.글수정하기(id, board);
 		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
 		
+	}
+	
+	@PostMapping("/api/board/{boardId}/reply")
+	public ResponseDto<Integer> replySave(@PathVariable int boardId, @RequestBody Reply reply, @AuthenticationPrincipal PrincipalDetail principal) { 
+		
+		
+		boardService.댓글쓰기(principal.getUser(),boardId, reply);
+		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
+
+		// 자바 오브젝트를 JSON으로 변환해서 리턴 --> Jackson
+
 	}
 
 	
