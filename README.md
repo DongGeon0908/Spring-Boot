@@ -11,6 +11,8 @@
 
 <hr />
 
+![Spring](https://perfectacle.github.io/images/auto-scanning-annotation-based-bean/thumb.png)
+
 ### 📒Contents
 
 > [What is Spring Boot?](https://github.com/DongGeon0908/Spring-Boot/tree/master/Spring%20Boot%20Basic)
