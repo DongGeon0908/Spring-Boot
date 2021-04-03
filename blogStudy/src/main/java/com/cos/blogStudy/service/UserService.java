@@ -27,12 +27,18 @@ public class UserService {
 
 	// 하나의 트랜잭션으로 작동!
 	@Transactional
-	public void 회원가입(User user) {
+	public int 회원가입(User user) {
 		String rawPassword = user.getPassword(); // 원문
 		String encPassword = encoder.encode(rawPassword);
 		user.setPassword(encPassword);
 		user.setRole(RoleType.USER);
-		userRepository.save(user);
+		try {
+			userRepository.save(user);
+			return 1;
+		} catch (Exception e) {
+			return -1;
+		}
+
 	}
 
 	@Transactional
