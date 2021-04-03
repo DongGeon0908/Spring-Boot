@@ -3,6 +3,7 @@ package com.cos.blogStudy.model;
 import java.sql.Timestamp;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -49,7 +50,7 @@ public class Board {
 	@JoinColumn(name="userId")
 	private User user; // JPA에서는 DB와 다르게 오브젝트를 저장할 수 있음
 	
-	@OneToMany(mappedBy = "board", fetch = FetchType.EAGER) // 연관관계의 주인이 아니다. -> FK가 아니다 -> DB에 컬럼을 만들지 않음
+	@OneToMany(mappedBy = "board", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE) // 연관관계의 주인이 아니다. -> FK가 아니다 -> DB에 컬럼을 만들지 않음
 	@JsonIgnoreProperties({"board"}) // 무한 참조를 막는 방법!!
 	@OrderBy("id desc") // 정렬
 	private List<Reply> replys;
