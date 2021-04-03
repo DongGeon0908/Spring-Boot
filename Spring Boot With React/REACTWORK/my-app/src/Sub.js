@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Sub = () => {
-
-    // 함수 제공!!
-
-    return (
-        <div>
-            <h1>Sub</h1>
-        </div>
-    );
-};
+class Sub extends Component {
+    render() {
+        return (
+            <div>
+                
+            </div>
+        );
+    }
+}
 
 export default Sub;
