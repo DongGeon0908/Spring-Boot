@@ -47,6 +47,10 @@
 
 > [스프링부트와 리엑트의 혼합!!](https://github.com/DongGeon0908/Spring-Boot/tree/master/Spring%20Boot%20With%20React/REACTWORK)
 
+> [스프링 프로젝트 생성!](https://start.spring.io)
+
+> [스프링 완전 기본 입문!!](https://github.com/DongGeon0908/Spring-Boot/tree/master/hello-spring)
+
 <hr />
 
 ### 본격적인 스프링 공부
@@ -103,6 +107,7 @@
   - 프로젝트 관리 도구
     - [`Gradle`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/Gradle.md)
     - [`Maven`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/Maven.md)
+  
 - Dev
 
   - [`@SpringApplication`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/SpringApplication.md)
@@ -172,6 +177,7 @@
 - [`DATABASE`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/DATABASE.md)
 
   - [`h2`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/h2.md)
+  
 - [`GIT`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/GIT.md)
 
   - [`.gitignore`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/SpringApplication.md)
@@ -198,13 +204,18 @@
 - 단독 파일 만들기 + 해당 과정은 `intellj-gradle`을 사용할 경우 가능!!
   > Gradle - Tasks - build - bootjar 클릭시 -> 프로젝트 - libs에 스프링 단독 실행 파일 생성!!
   > <br>
+  
+- 최근 Spring 프로젝트 트렌드
+
+  - SpringBoot + Gradle + Thymeleaf + JPA-HIBERNATE 
 
 ### 🔗Reference
 
-- 코드로 배우는 스프링 부트 웹 프로젝트
-- 자바 웹을 다루는 기술
-- 코드로 배우는 스프링 웹 프로젝트
-- 스프링 부트와 AWS로 혼자 구현하는 웹 서비스
-- 스프링 부트 시큐리티 특강 - 구름에듀
-- 스프링 부트 나만의 블로그 만들기 - 구름에듀
-- 스프링 부트 개념정리 - 구름에듀
+- 코드로 배우는 스프링 부트 웹 프로젝트 (서적)
+- 자바 웹을 다루는 기술 (서적)
+- 코드로 배우는 스프링 웹 프로젝트 (서적)
+- 스프링 부트와 AWS로 혼자 구현하는 웹 서비스 (서적)
+- 스프링 부트 시큐리티 특강 (강의)
+- 스프링 부트 나만의 블로그 만들기 (강의)
+- 스프링 부트 개념정리 (강의)
+- 스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술 (강의)
