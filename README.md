@@ -15,6 +15,10 @@
 
 ### 📒Contents
 
+> [SprinBoot API 문서](https://spring.io/projects/spring-boot)
+
+> [Thymeleaf API 문서](https://www.thymeleaf.org/)
+
 > [What is Spring Boot?](https://github.com/DongGeon0908/Spring-Boot/tree/master/Spring%20Boot%20Basic)
 
 > [DongGeon's Blog](https://github.com/DongGeon0908/Spring-Boot/tree/master/Spring%20Boot%20Blog)
@@ -95,6 +99,21 @@
       + 트랜잭션이나 로깅, 보안과 같이 여러 모듈에서 공통적으로 사용하는 기능의 경우 해당 기능을 분리하여 관리
         + 프로그램 가독성
         + 기술 은닉
+
+  
+
+  <hr />
+
+  ### 스프링부트 프로젝트 진행 경로
+
+  ![대박!](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FXfLm5%2FbtqNSyXaHK5%2FHw3K9ceUR7e8VmlT1NJvLk%2Fimg.png)
+
+  1. 사용자 요청
+  2. `Controller`
+
+  
+
+  
 
   <hr />
 

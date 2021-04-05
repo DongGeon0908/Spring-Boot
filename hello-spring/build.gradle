@@ -1,3 +1,5 @@
+// Gradle이나 Maven은 의존성을 관리해줌!!
+
 plugins {
 	id 'org.springframework.boot' version '2.4.4'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
