@@ -78,6 +78,10 @@
             + 자바 클래스에 `@Configuration` 애너테이션을, 메서드에 `@Bean` 애너테이션을 이용해 `Bean`을 등록
       + 의존 관계 주입
         + 오브젝트 간의 의존 관계를 만드는 것
+        + 생성자 기반 의존성 주입 `Constructor based dependency Injection`
+          + 생성자의 인수를 사용해 의존성 주입
+        + 설정자 기반 의존성 주입 `Setter based dependency Injection`
+          + 메서드의 인수를 통해 의존성을 주입
       + 각각의 계층이나 서비스들 간에 의존성이 존재할 경우 프레임워크가 서로 연결시켜줌
         + 변경 용이성
         + 확장성
