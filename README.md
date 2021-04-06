@@ -100,7 +100,17 @@
         + 프로그램 가독성
         + 기술 은닉
 
-  
+  <hr />
+
+  ### Server 개발
+
+  - 정적 컨텐츠
+
+    ![정적 컨텐츠](https://blog.kakaocdn.net/dn/n1GsR/btqJ6cCpK10/CoRpkbTRYgcTu6dqAxVMEK/img.png)
+
+  - `MVC`와 템플릿 엔진
+
+  - `API`
 
   <hr />
 
