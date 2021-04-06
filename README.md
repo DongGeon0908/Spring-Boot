@@ -110,6 +110,10 @@
 
   - `MVC`와 템플릿 엔진
 
+    - `MVC == Model View Controller`
+
+    ![이미지](https://mblogthumb-phinf.pstatic.net/MjAyMDA4MDJfNjYg/MDAxNTk2Mjk4Mzc5NjU0.ZCccUoyDy4Ktg9LTOPetxNrFb4NTo3WJNoTNz_H36Wsg.AyuiBWhdsHNxVV-WgKu_AdfDNaJYi5gP1Hdprh7ZNGEg.PNG.adamdoha/image.png?type=w800)
+
   - `API`
 
   <hr />
