@@ -1,41 +1,38 @@
+import React, { createRef, useRef, useState } from 'react';
 
-// useMemo => 메모라이제이션(기억)
-// React Hooks
+// useRef (디자인)
+// dom을 변경할 때 사용
 
-import { useMemo, useState } from "react";
+
 
 function App(){
+const myRef = useRef(null);
+const [list, setList] = useState([
+  {id:1, name:"깅동건"},
+  {id:2, name:"깅동"} 
+]);
+const myRefs = Array.from({length: list.length}).map(()=> createRef());
 
-  const[list, setList] = useState([1,2,3,4]);
-  const[str, setStr] = useState("합계");
-  
 
+  return (
+    <div>
+      <button onClick={() => {
+        console.log(myRef);
+        console.log(myRef.current);
+     //   myRef.current.style.backgroundColor = 'red';
 
-  const getAddResult = () =>{
-    //1 초
-    let sum = 0;
-    list.forEach((i) => (sum = sum + i));
-    console.log('sum', sum);
-    return sum;
-  }
-  const addResult = useMemo(()=>getAddResult(),[list]);
+        myRefs[0].current.style.backgroundColor = 'red';
+      }}
+      >
+        색 변경
+        </button>
+        <div ref={myRef}>박스 </div>
+        {list.map((user, index) => (
+          <h1 ref={myRefs[index]}>{user.name}</h1>
+        ))}
 
-return <div>
- <button onClick={()=>{setStr("안녕");
-  }}> 리스트값 추가
-  </button>
-
-  <button onClick={()=>{setList([...list, 10]);
-  }}> 리스트값 추가
-  </button>
-  <div>
-  {list.map((i) => (
-    <h1>{i}</h1>
-  ))}
-  </div>
-  <div>{str} : {addResult}</div>
-</div>
-
-}
+    </div>
+  );
+};
 
 export default App;
