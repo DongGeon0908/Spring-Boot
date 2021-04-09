@@ -147,6 +147,16 @@
 
   <hr />
 
+  - 스프링 빈을 등록하는 방법
+    - 컴포넌트 스캔과 자동 의존관계 설정
+      - `@Component` -> 스프링 빈으로 자동 등록
+      - `@Controller` -> Component를 통해 스프링 빈으로 자동등록
+      - `@Service` -> Component를 통해 스프링 빈으로 자동등록
+      - `@Repository` -> Component를 통해 스프링 빈으로 자동등록
+    - 자바 코드로 직접 스프링 빈 등록
+
+  <hr />
+
 - ENV
   - [`Intellij`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/Intellij.md)
   - [`eclipse`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/eclipse.md)
