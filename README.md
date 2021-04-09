@@ -129,9 +129,21 @@
   1. 사용자 요청
   2. `Controller`
 
-  
+  <hr />
 
-  
+  - 일반적인 웹 애플리케이션 계층 구조
+
+    ![이미지](https://blog.kakaocdn.net/dn/nRHkz/btqSdsY8mlB/8XK2IcPfvfZVykl78x29h0/img.png)
+
+    - 컨트롤러
+      - 웹 MVC의 컨트롤러 역할
+    - 서비스
+      - 핵심 비즈니스 로직 구현
+    - 레포지토리
+      - 데이터베이스에 접근
+      - 도메인 객체를 DB에 저장하고 관리
+    - 도메이
+      - 비즈니스 도메인 객체
 
   <hr />
 
