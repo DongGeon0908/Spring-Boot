@@ -169,9 +169,11 @@
   
 - Dev
 
+  - [`MVC`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/MVC.md)
   - [`@SpringApplication`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/SpringApplication.md)
   - [`@Autowired`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/Autowired.md)
   - [`Controller`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/Controller.md)
+    - [`REST`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/REST.md)
     - [`@RestController`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/RestController.md)
   - [`Model`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/Model.md)
   - [`View`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/View.md)
@@ -216,7 +218,6 @@
     - [`M:N`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/M-N.md)
     - [`fetch`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/fetch.md)
     - [`JPA Repository 확장`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/jparepositoryexpansion.md)
-    
   - [`domain`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/domain.md)
   - [`API`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/API.md)
     - [`Filter for API`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/FilterFORAPI.md)
@@ -253,6 +254,8 @@
   - [`.andExpect(status().isOk())`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/andExpect.md)
   - [`assertThat`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/assertThat.md)
     - [`isEqualTo`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/isEqualTo.md)
+
+- [`예외처리`](https://github.com/DongGeon0908/Spring-Boot/blob/master/md/exception.md)
 
 - Server
 
