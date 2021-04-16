@@ -20,7 +20,7 @@ public class HelloController {
     // static - > page를 리턴
     // GetMapping 안에 주소는 request 요청임!
     @GetMapping("hello-mvc")
-    public String helloMvc(@RequestParam(value = "name", required = true) String name, Model model){
+    public String helloMvc(@RequestParam(value = "name", required = true) String name, Model model) {
         model.addAttribute("name", name);
         return "hello-template";
     }
@@ -28,14 +28,14 @@ public class HelloController {
     // MVC -> 데이터 및 템플릿을 MVC로 나눠서 사용
     @GetMapping("hello-string")
     @ResponseBody // http 전송 방식의 body 부분에 데이터를 직접 추가
-    public String helloString(@RequestParam("name") String name){
+    public String helloString(@RequestParam("name") String name) {
         return "hello " + name; // hello + 사용자입력
     }
 
     // API -> json 방식이 default
     @GetMapping("hello-api")
     @ResponseBody
-    public Hello helloApi(@RequestParam("name") String name){
+    public Hello helloApi(@RequestParam("name") String name) {
         Hello hello = new Hello();
         hello.setName(name);
         return hello;
@@ -46,11 +46,11 @@ public class HelloController {
     static class Hello {
         private String name;
 
-        public String getName(){
+        public String getName() {
             return name;
         }
 
-        public void setName(String name){
+        public void setName(String name) {
             this.name = name;
         }
     }

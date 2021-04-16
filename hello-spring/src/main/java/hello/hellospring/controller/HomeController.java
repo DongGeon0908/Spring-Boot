@@ -8,7 +8,7 @@ public class HomeController {
 
     // 요청에 대해 컨트롤러에서 먼저 확인하고 -> 없으면 static 파일 찾음
     @GetMapping("/")
-    public String home(){
+    public String home() {
         return "home";
     }
 
