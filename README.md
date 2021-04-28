@@ -76,8 +76,16 @@
       + 일반 오브젝트의 생애 주기 관리나, 오브젝트 간의 의존관계를 해결하는 아키텍처를 구현
         + 스프링 빈의 생성, 관계, 조립, 생명주기를 관리하는 핵심 개념
         + 의존관계주입 `DI`을 이용해 애플리케이션을 구성하는 컴포넌트를 관리
+    
++ `AOP`
+  
+    + `AOP`가 필요한 상황
+      + 모든 메소드의 호출 시간을 측정하고 싶을때
+      + 공통 관심 사항 vs 핵심 관심 사항
+      + 회원 가입 시간, 화면 조회 시간 측
+  
   + `DI AOP`
-
+  
     + `DI`
       + `Dependency Injection`
         + `XML, Annotation, Java` 기반 설정을 통해서 객체간의 의존 관계를 설정
@@ -90,19 +98,19 @@
       + 의존 관계 주입
         + 오브젝트 간의 의존 관계를 만드는 것
         + 생성자 기반 의존성 주입 `Constructor based dependency Injection`
-          + 생성자의 인수를 사용해 의존성 주입
+        + 생성자의 인수를 사용해 의존성 주입
         + 설정자 기반 의존성 주입 `Setter based dependency Injection`
-          + 메서드의 인수를 통해 의존성을 주입
+        + 메서드의 인수를 통해 의존성을 주입
       + 각각의 계층이나 서비스들 간에 의존성이 존재할 경우 프레임워크가 서로 연결시켜줌
-        + 변경 용이성
+      + 변경 용이성
         + 확장성
         + 품질관리 용이
         + 객체 간의 결합도를 낮춤
-
+  
     + `AOP`
-
+  
       ![AOP](https://i.loli.net/2019/06/01/5cf1f4f78070020870.jpg)
-
+  
       + `Aspect Oriented Programming`
       + 트랜잭션이나 로깅, 보안과 같이 여러 모듈에서 공통적으로 사용하는 기능의 경우 해당 기능을 분리하여 관리
         + 프로그램 가독성
@@ -201,13 +209,13 @@
         ![트랜잭션 처리 과정](https://blog.kakaocdn.net/dn/qfJ8q/btqzYCZvRBC/dAN53WjLEZJQNRW4Wkz1H0/img.png)
     
       + 트랜잭션 처리 방법
-    
+  
         + 선언적 트랜잭션 처리
-          + 미리 선언된 규칙에 다라 트랜잭션을 제어하는 방법
+        + 미리 선언된 규칙에 다라 트랜잭션을 제어하는 방법
             + `xml`
-            + `@Transactional`
+          + `@Transactional`
               + 메서드 -> 클래스 -> 인터페이스
-        + 명시적 트랜잭션 처리
+      + 명시적 트랜잭션 처리
           + 소스 코드상에 트랜잭션 처리 메서드를 호출하므로 복잡하고 가독성이 떨어짐
 
   
@@ -229,32 +237,32 @@
   - `API`
 
     ![API](https://mblogthumb-phinf.pstatic.net/MjAyMDA4MDJfNzcg/MDAxNTk2Mjk5MzQ0MDgx.HgQoTGqFOBR9lhc0ZZHjen6DtgRK-KROFAxcUb9uJKMg.YcE00M3y9XI9HkoGgpm_a1X2eqDd0IkVsn09VBsp5JUg.PNG.adamdoha/image.png?type=w800)
-
-  <hr />
-
-  ### 스프링부트 프로젝트 진행 경로
-
-  ![대박!](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FXfLm5%2FbtqNSyXaHK5%2FHw3K9ceUR7e8VmlT1NJvLk%2Fimg.png)
-
-  1. 사용자 요청
+  
+<hr />
+  
+### 스프링부트 프로젝트 진행 경로
+  
+![대박!](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FXfLm5%2FbtqNSyXaHK5%2FHw3K9ceUR7e8VmlT1NJvLk%2Fimg.png)
+  
+1. 사용자 요청
   2. `Controller`
-
+  
   <hr />
-
+  
   - 일반적인 웹 애플리케이션 계층 구조
-
+  
     ![이미지](https://blog.kakaocdn.net/dn/nRHkz/btqSdsY8mlB/8XK2IcPfvfZVykl78x29h0/img.png)
-
+  
     - 컨트롤러
-      - 웹 MVC의 컨트롤러 역할
+    - 웹 MVC의 컨트롤러 역할
     - 서비스
-      - 핵심 비즈니스 로직 구현
+    - 핵심 비즈니스 로직 구현
     - 레포지토리
       - 데이터베이스에 접근
       - 도메인 객체를 DB에 저장하고 관리
     - 도메이
       - 비즈니스 도메인 객체
-
+  
   <hr />
 
   - 스프링 빈을 등록하는 방법
@@ -264,7 +272,7 @@
       - `@Service` -> Component를 통해 스프링 빈으로 자동등록
       - `@Repository` -> Component를 통해 스프링 빈으로 자동등록
     - 자바 코드로 직접 스프링 빈 등록
-
+  
   <hr />
 
 
