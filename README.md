@@ -83,7 +83,7 @@
       + 모든 메소드의 호출 시간을 측정하고 싶을때
       + 공통 관심 사항 vs 핵심 관심 사항
       + 회원 가입 시간, 화면 조회 시간 측
-  
+    
   + `DI AOP`
   
     + `DI`
@@ -216,39 +216,40 @@
           + `@Transactional`
               + 메서드 -> 클래스 -> 인터페이스
       + 명시적 트랜잭션 처리
-          + 소스 코드상에 트랜잭션 처리 메서드를 호출하므로 복잡하고 가독성이 떨어짐
-
+          
+        + 소스 코드상에 트랜잭션 처리 메서드를 호출하므로 복잡하고 가독성이 떨어짐
   
 
-  <hr />
-
-  ### Server 개발
-
-  - 정적 컨텐츠
-
-    ![정적 컨텐츠](https://blog.kakaocdn.net/dn/n1GsR/btqJ6cCpK10/CoRpkbTRYgcTu6dqAxVMEK/img.png)
-
-  - `MVC`와 템플릿 엔진
-
-    - `MVC == Model View Controller`
-
-    ![이미지](https://mblogthumb-phinf.pstatic.net/MjAyMDA4MDJfNjYg/MDAxNTk2Mjk4Mzc5NjU0.ZCccUoyDy4Ktg9LTOPetxNrFb4NTo3WJNoTNz_H36Wsg.AyuiBWhdsHNxVV-WgKu_AdfDNaJYi5gP1Hdprh7ZNGEg.PNG.adamdoha/image.png?type=w800)
-
-  - `API`
-
-    ![API](https://mblogthumb-phinf.pstatic.net/MjAyMDA4MDJfNzcg/MDAxNTk2Mjk5MzQ0MDgx.HgQoTGqFOBR9lhc0ZZHjen6DtgRK-KROFAxcUb9uJKMg.YcE00M3y9XI9HkoGgpm_a1X2eqDd0IkVsn09VBsp5JUg.PNG.adamdoha/image.png?type=w800)
   
 <hr />
   
+### Server 개발
+  
+- 정적 컨텐츠
+  
+  ![정적 컨텐츠](https://blog.kakaocdn.net/dn/n1GsR/btqJ6cCpK10/CoRpkbTRYgcTu6dqAxVMEK/img.png)
+  
+- `MVC`와 템플릿 엔진
+  
+  - `MVC == Model View Controller`
+  
+  ![이미지](https://mblogthumb-phinf.pstatic.net/MjAyMDA4MDJfNjYg/MDAxNTk2Mjk4Mzc5NjU0.ZCccUoyDy4Ktg9LTOPetxNrFb4NTo3WJNoTNz_H36Wsg.AyuiBWhdsHNxVV-WgKu_AdfDNaJYi5gP1Hdprh7ZNGEg.PNG.adamdoha/image.png?type=w800)
+  
+- `API`
+  
+    ![API](https://mblogthumb-phinf.pstatic.net/MjAyMDA4MDJfNzcg/MDAxNTk2Mjk5MzQ0MDgx.HgQoTGqFOBR9lhc0ZZHjen6DtgRK-KROFAxcUb9uJKMg.YcE00M3y9XI9HkoGgpm_a1X2eqDd0IkVsn09VBsp5JUg.PNG.adamdoha/image.png?type=w800)
+  
+<hr />
+
 ### 스프링부트 프로젝트 진행 경로
-  
+
 ![대박!](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FXfLm5%2FbtqNSyXaHK5%2FHw3K9ceUR7e8VmlT1NJvLk%2Fimg.png)
-  
+
 1. 사용자 요청
   2. `Controller`
-  
+
   <hr />
-  
+
   - 일반적인 웹 애플리케이션 계층 구조
   
     ![이미지](https://blog.kakaocdn.net/dn/nRHkz/btqSdsY8mlB/8XK2IcPfvfZVykl78x29h0/img.png)
@@ -262,7 +263,7 @@
       - 도메인 객체를 DB에 저장하고 관리
     - 도메이
       - 비즈니스 도메인 객체
-  
+
   <hr />
 
   - 스프링 빈을 등록하는 방법
@@ -272,7 +273,7 @@
       - `@Service` -> Component를 통해 스프링 빈으로 자동등록
       - `@Repository` -> Component를 통해 스프링 빈으로 자동등록
     - 자바 코드로 직접 스프링 빈 등록
-  
+
   <hr />
 
 
@@ -316,7 +317,10 @@
 
 <hr />
 
+- [스프링 프레임워크 기본]()
+  
 - ENV
+  
   - [`Intellij`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/Intellij.md)
   - [`eclipse`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/eclipse.md)
   - [`STS`](https://github.com/DongGeon0908/Spring-Boot/blob/master/Spring-Boot-With-AWS/STS.md)
@@ -440,3 +444,4 @@
 - 스프링 부트 나만의 블로그 만들기 (강의)
 - 스프링 부트 개념정리 (강의)
 - 스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술 (강의)
+- 자바 스프링 프레이웜크 - 신입 프로그래머를 위한 강좌 (강의)
