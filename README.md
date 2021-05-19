@@ -55,6 +55,8 @@
 
 > [스프링 완전 기본 입문!!](https://github.com/DongGeon0908/Spring-Boot/tree/master/hello-spring)
 
+> [웹프로그래밍과 스프링](https://github.com/DongGeon0908/Spring-Boot/blob/master/%EC%8A%A4%ED%94%84%EB%A7%81%EA%B8%B0%EB%B3%B8.md)
+
 <hr />
 
 ### 본격적인 스프링 공부
@@ -76,7 +78,6 @@
       + 일반 오브젝트의 생애 주기 관리나, 오브젝트 간의 의존관계를 해결하는 아키텍처를 구현
         + 스프링 빈의 생성, 관계, 조립, 생명주기를 관리하는 핵심 개념
         + 의존관계주입 `DI`을 이용해 애플리케이션을 구성하는 컴포넌트를 관리
-    
 + `AOP`
   
     + `AOP`가 필요한 상황
@@ -216,15 +217,14 @@
           + `@Transactional`
               + 메서드 -> 클래스 -> 인터페이스
       + 명시적 트랜잭션 처리
-          
+        
         + 소스 코드상에 트랜잭션 처리 메서드를 호출하므로 복잡하고 가독성이 떨어짐
   
-
   
 <hr />
-  
+
 ### Server 개발
-  
+
 - 정적 컨텐츠
   
   ![정적 컨텐츠](https://blog.kakaocdn.net/dn/n1GsR/btqJ6cCpK10/CoRpkbTRYgcTu6dqAxVMEK/img.png)
@@ -238,7 +238,7 @@
 - `API`
   
     ![API](https://mblogthumb-phinf.pstatic.net/MjAyMDA4MDJfNzcg/MDAxNTk2Mjk5MzQ0MDgx.HgQoTGqFOBR9lhc0ZZHjen6DtgRK-KROFAxcUb9uJKMg.YcE00M3y9XI9HkoGgpm_a1X2eqDd0IkVsn09VBsp5JUg.PNG.adamdoha/image.png?type=w800)
-  
+
 <hr />
 
 ### 스프링부트 프로젝트 진행 경로
