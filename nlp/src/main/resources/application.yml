@@ -1,0 +1,56 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  devtools:
+    remote:
+      restart:
+        enabled: true
+  servlet:
+    multipart:
+      enabled: true
+      location: ${java.io.tmpdir}
+      max-file-size: 100KB
+      max-request-size: 100KB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hanshinnlp?serverTimezone=Asia/Seoul
+    username: hanshinnlp
+    password: hanshinnlp1234
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      use-new-id-generator-mappings: false
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+
+http:
+  encodign:
+    charset: UTF-8
+    enable: true
+    force: true
+
+
+
+
+
+
