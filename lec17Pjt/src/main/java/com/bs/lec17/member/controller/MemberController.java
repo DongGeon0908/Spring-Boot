@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -23,7 +24,7 @@ public class MemberController {
 	// Post 방식일때는 POST임을 명시해야함!!
 	// Post 방식일때는 POST임을 명시해야함!!
 	@RequestMapping(value = "/memJoin", method = RequestMethod.POST)
-	public String memJoin(Member member) {
+	public String memJoin(@ModelAttribute("Mem") Member member) {
 
 		service.memberRegister(member.getMemId(), member.getMemPw(), member.getMemMail(), member.getMemPhone1(),
 				member.getMemPhone2(), member.getMemPhone3());

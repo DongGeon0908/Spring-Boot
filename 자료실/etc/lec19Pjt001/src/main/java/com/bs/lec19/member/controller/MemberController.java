@@ -23,6 +23,7 @@ public class MemberController {
 	@Autowired
 	MemberService service;
 	
+	// 상단에 @ModelAttribute로 어노테이션이 지정되어 있는 메서드는 공통메서드로 다른 메소드가 호출될때 같이 호출되어 실행됨!!
 	@ModelAttribute("serverTime")
 	public String getServerTime(Locale locale) {
 		
