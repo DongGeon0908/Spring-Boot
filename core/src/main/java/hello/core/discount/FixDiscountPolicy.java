@@ -12,8 +12,7 @@ public class FixDiscountPolicy implements DiscountPolicy {
     public int discount(Member member, int price) {
         if (member.getGrade() == Grade.VIP) {
             return discountFixAmount;
-        } else {
-            return 0;
         }
+        return 0;
     }
 }
