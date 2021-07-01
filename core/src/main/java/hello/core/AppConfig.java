@@ -8,23 +8,30 @@ import hello.core.member.MemberServiceImpl;
 import hello.core.member.MemoryMemberRepository;
 import hello.core.order.OrderService;
 import hello.core.order.OrderServiceImpl;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-public class Appconfig {
+@Configuration // 스프링 컨테이너에 등록
+public class AppConfig {
 
+    @Bean
     public MemberService memberService() {
         // 생성자 주입 <- DI
         return new MemberServiceImpl(memberRepository());
     }
 
+    @Bean
     public OrderService orderService() {
         // 생성자 주입 <- DI
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
-    private MemoryMemberRepository memberRepository() {
+    @Bean
+    public MemoryMemberRepository memberRepository() {
         return new MemoryMemberRepository();
     }
 
+    @Bean
     public DiscountPolicy discountPolicy() {
         return new RateDiscountPolicy();
     }
