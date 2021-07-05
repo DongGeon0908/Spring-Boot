@@ -9,14 +9,23 @@ import org.springframework.stereotype.Component;
 @Component
 public class OrderServiceImpl implements OrderService {
 
-    private final MemberRepository memberRepository;
-    private final DiscountPolicy discountPolicy;
+    private MemberRepository memberRepository;
+    private DiscountPolicy discountPolicy;
 
-    @Autowired
+
+    // 셍성자가 하나일때는 @Autowired를 생략할 수 있음
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        System.out.println();
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
+
+    @Autowired
+    public void init(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
+
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
