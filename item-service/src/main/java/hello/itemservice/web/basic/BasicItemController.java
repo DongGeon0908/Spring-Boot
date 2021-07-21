@@ -72,6 +72,16 @@ public class BasicItemController {
         return "basic/item";
     }
 
+    //@PostMapping("/add")
+    public String addItemV4_2(Item item) {
+        itemRepository.save(item);
+
+        //자동 추가가 되기 때문에, 생략이 가능함
+        //model.addAttribute("item", item);
+
+        return "basic/item";
+    }
+
     @PostMapping("/add")
     public String addItemV5(Item item) {
         itemRepository.save(item);
@@ -79,7 +89,7 @@ public class BasicItemController {
         //자동 추가가 되기 때문에, 생략이 가능함
         //model.addAttribute("item", item);
 
-        return "basic/item";
+        return "redirect:/basic/items/" + item.getId();
     }
 
     @GetMapping("/{itemId}/edit")
