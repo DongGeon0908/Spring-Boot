@@ -22,6 +22,18 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // 개발 진행 중 도우미 역할 수행
+    implementation 'org.springframework.boot:spring-boot-devtools'
+    implementation 'junit:junit:4.13.1'
+
+    /**
+     SQL 쿼리 로그 확인하기-- 자세하게~
+     https://github.com/gavlyukovskiy/spring-boot-data-source-decorator
+     */
+    implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.6'
+
+
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok'
