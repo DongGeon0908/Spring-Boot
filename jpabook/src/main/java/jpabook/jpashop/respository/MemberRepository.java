@@ -1,17 +1,17 @@
 package jpabook.jpashop.respository;
 
 import jpabook.jpashop.domain.Member;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
+@RequiredArgsConstructor
 public class MemberRepository {
 
-    @PersistenceContext
-    private EntityManager em;
+    private final EntityManager em;
 
     public void save(Member member) {
         em.persist(member);
@@ -23,7 +23,7 @@ public class MemberRepository {
     }
 
     // JPQL은 엔티티에 대한 조회를 진행
-    // from의 대상이 Entity
+    // from의 대상이 Entity가 됨
     public List<Member> findAll() {
         return em.createQuery("select m from Member m", Member.class)
                 .getResultList();
