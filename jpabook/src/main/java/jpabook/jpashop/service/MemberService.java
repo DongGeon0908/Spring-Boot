@@ -29,7 +29,7 @@ public class MemberService {
     private void validateDuplicateMember(Member member) {
         List<Member> findMembers = memberRepository.findByName(member.getName());
         if (!findMembers.isEmpty()) {
-            throw new IllegalArgumentException(ERROR_MESSAGE);
+            throw new IllegalStateException(ERROR_MESSAGE);
         }
     }
 
