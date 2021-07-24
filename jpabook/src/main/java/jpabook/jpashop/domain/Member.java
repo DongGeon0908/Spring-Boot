@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Table(name = "member")
 @Getter
 @Setter
 public class Member {
@@ -24,6 +25,7 @@ public class Member {
     @Embedded
     private Address address;
 
+    // 컬렉션은 필드에서 바로 초기화하는게 좋음!!
     // 연관관계의 거울
     @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
