@@ -8,6 +8,12 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * API를 만들때는 꼭! 엔티티를 반환하지 말자!!
+ * 외부에는 엔티티를 보내지 말기! 그리고 받지도 말자!!
+ * 화면에 맞는 DTO로 반환하고 요청받기
+ */
+
 @Entity
 @Table(name = "member")
 @Getter
