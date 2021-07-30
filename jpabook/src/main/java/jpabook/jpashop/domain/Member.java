@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import javax.validation.constraints.NotEmpty;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +25,8 @@ public class Member {
     @Column(name = "member_id")
     private Long id;
 
+    // 검증 로직이 엔티티에 있다???
+
     private String name;
 
     // 내장 타입을 의미
@@ -35,4 +37,5 @@ public class Member {
     // 연관관계의 거울
     @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
+
 }
