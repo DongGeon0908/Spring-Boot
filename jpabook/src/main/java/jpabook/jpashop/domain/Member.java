@@ -37,6 +37,7 @@ public class Member {
     // 컬렉션은 필드에서 바로 초기화하는게 좋음!!
     // 연관관계의 거울
     // @JsonIgnore <-- 제외시키기
+    @JsonIgnore
     @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
 
