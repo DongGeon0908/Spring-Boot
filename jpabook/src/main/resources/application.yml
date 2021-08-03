@@ -14,6 +14,7 @@ spring:
       hibernate:
         #       show_sql: true
         format_sql: true
+        default_batch_fetch_size: 100 #순간부하를 생각해서 정하기!!
 
 logging:
   level:
