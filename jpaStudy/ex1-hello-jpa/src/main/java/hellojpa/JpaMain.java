@@ -17,10 +17,14 @@ public class JpaMain {
         tx.begin();
 
         try {
-            Member member = new Member();
-            member.setId(1L);
-            member.setName("HelloA");
+
+            Member member = new Member(200L, "member200");
             em.persist(member);
+
+            em.flush();
+
+            System.out.println("--------------------");
+
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
