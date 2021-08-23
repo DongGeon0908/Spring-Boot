@@ -7,6 +7,8 @@ import org.springframework.stereotype.Repository;
 import study.datajpa.dto.MemberDto;
 import study.datajpa.entity.Member;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @Repository
@@ -25,4 +27,7 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
 
     @Query("select new study.datajpa.dto.MemberDto(m.id, m.username, t.name) from Member m join m.team t")
     List<MemberDto> findMemberDto();
+
+    @Query("select m from Member m where m.username in :names")
+    List<Member> findByNames(@Param("names") Collection<String> names);
 }
