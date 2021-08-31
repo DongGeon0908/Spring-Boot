@@ -8,9 +8,11 @@ import org.springframework.transaction.annotation.Transactional;
 import study.datajpa.dto.MemberDto;
 import study.datajpa.entity.Member;
 import study.datajpa.entity.Team;
+import study.datajpa.repository.TeamRepository;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
@@ -22,6 +24,7 @@ class MemberRepositoryTest {
 
     @Autowired
     MemberRepository memberRepository;
+
 
     @Autowired
     TeamRepository teamRepository;
@@ -134,6 +137,19 @@ class MemberRepositoryTest {
         for (Member member : result) {
             System.out.println("member = " + member);
         }
+    }
+
+    @Test
+    public void returnType() {
+        Member member1 = new Member("AAA", 10);
+        Member member2 = new Member("BBB", 20);
+
+        memberRepository.save(member1);
+        memberRepository.save(member2);
+
+        List<Member> aaa = memberRepository.findListByUsername("AAA");
+        Optional<Member> bbb = memberRepository.findOptionalByUsername("AAA");
+        Member ccc = memberRepository.findMemberByUsername("AAA");
     }
 
 }
