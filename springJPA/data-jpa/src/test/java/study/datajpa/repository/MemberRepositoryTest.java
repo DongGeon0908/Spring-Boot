@@ -14,6 +14,8 @@ import study.datajpa.entity.Member;
 import study.datajpa.entity.Team;
 import study.datajpa.repository.TeamRepository;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.awt.print.Pageable;
 import java.util.Arrays;
 import java.util.List;
@@ -33,6 +35,9 @@ class MemberRepositoryTest {
 
     @Autowired
     TeamRepository teamRepository;
+
+    @PersistenceContext
+    EntityManager entityManager;
 
     @Test
     public void testMember() {
@@ -186,6 +191,25 @@ class MemberRepositoryTest {
         assertThat(page.isFirst()).isTrue();
 
 
+    }
+
+    @Test
+    public void bulkUpdate() {
+        memberRepository.save(new Member("member1", 10));
+        memberRepository.save(new Member("member2", 19));
+        memberRepository.save(new Member("member3", 20));
+        memberRepository.save(new Member("member4", 21));
+        memberRepository.save(new Member("member5", 40));
+
+        int resultCount = memberRepository.bulkAgePlus(20);
+//        entityManager.flush();
+        //      entityManager.clear();
+
+        List<Member> result = memberRepository.findByUsername("member5");
+        Member member5 = result.get(0);
+        System.out.println(member5);
+
+        assertThat(resultCount).isEqualTo(3);
     }
 
 }
