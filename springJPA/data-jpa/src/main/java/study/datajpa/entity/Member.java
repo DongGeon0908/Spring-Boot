@@ -9,10 +9,11 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @ToString(of = {"id", "username", "age"})
-@NamedQuery(
-        name = "Member.findByUsername",
-        query = "select m from Member m where m.username = :username"
-) // NamedQuery는 잘 사용하지 않는다!!, 버그나 오타를 잡는데 NamedQuery가 편하다!
+//@NamedQuery(
+//        name = "Member.findByUsername",
+//        query = "select m from Member m where m.username = :username"
+//) // NamedQuery는 잘 사용하지 않는다!!, 버그나 오타를 잡는데 NamedQuery가 편하다!
+@NamedEntityGraph(name = "Member.all", attributeNodes = @NamedAttributeNode("team"))
 public class Member {
     @Id
     @GeneratedValue
