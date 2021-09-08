@@ -14,7 +14,7 @@ import javax.persistence.*;
 //        query = "select m from Member m where m.username = :username"
 //) // NamedQuery는 잘 사용하지 않는다!!, 버그나 오타를 잡는데 NamedQuery가 편하다!
 @NamedEntityGraph(name = "Member.all", attributeNodes = @NamedAttributeNode("team"))
-public class Member {
+public class Member extends JpaBaseEntity {
     @Id
     @GeneratedValue
     @Column(name = "member_id")
