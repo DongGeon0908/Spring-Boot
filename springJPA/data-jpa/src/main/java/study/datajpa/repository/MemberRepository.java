@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface MemberRepository extends JpaRepository<Member, Long>, MemberRepositoryCustom {
+public interface MemberRepository extends JpaRepository<Member, Long>, MemberRepositoryCustom, JpaSpecificationExecutor<Member> {
     List<Member> findByUsernameAndAgeGreaterThan(String username, int age);
 
     //생략가능
@@ -71,4 +71,12 @@ public interface MemberRepository extends JpaRepository<Member, Long>, MemberRep
     // JPA가 지원하는 LOCK --> 실시간 트래픽이 많을 경우는 LOCK 걸지 말기!
     @Lock(LockModeType.PESSIMISTIC_WRITE)
     List<Member> findLockByUsername(String username);
+
+    List<UsernameOnlyDto> findProjectionsByUsername(@Param("username") String username);
+
+    @Query(value = "select * from member where username = ?", nativeQuery = true)
+    Member findByNativeQuery(String username);
+
+    @Query(value = "select m.member_id as id, m.username, t.name as teamName from member m left join team t", countQuery = "select count(*) from member", nativeQuery = true)
+    Page<MemberProjection> findByNativeProjection(Pageable pageable);
 }
